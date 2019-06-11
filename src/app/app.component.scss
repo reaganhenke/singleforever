@@ -1,0 +1,15 @@
+.container {
+  min-height:100%;
+}
+
+.placeholder {
+  // background: gray;
+  // height: 500px;
+  // width: 500px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px; // replcae this, $footer-height
+}

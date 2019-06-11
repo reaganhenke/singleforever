@@ -1,0 +1,52 @@
+@import '../variables';
+
+header {
+  // background-color: purple;
+  // width: 100%;
+  padding: $normal 0;
+}
+
+.banner {
+  // background-color: pink;
+  display: flex;
+  min-height: 300px;
+  // height: 18rem;
+  // width: 100%;
+  h1 {
+    // background-color: orange;
+    // flex-grow: 2;
+    text-align: center;
+    font-family: 'Arbutus Slab', serif;
+    font-size: 4rem; // $large-text
+
+  }
+  > * {
+    // flex-grow: 1;
+    width: 33.33%;
+  }
+  div:first-child {
+    // background-color: gray;
+    position: relative;
+    img {
+      height: 300px;
+      margin-bottom: -5px;
+      bottom: 0;
+      position: absolute;
+    }
+  }
+  div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+section {
+  background-color: $navy;
+  display: flex;
+  justify-content: space-between;
+  height: 4rem;
+  .home {
+    display: flex;
+  }
+}
