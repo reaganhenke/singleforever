@@ -1,0 +1,57 @@
+main {
+  margin: 4rem auto;
+  max-width: 940px;
+  height: 100%;
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+a {
+  height: 200px;
+  width: 200px;
+  border: 10px solid white;
+  background-size: auto 100%;
+  background-position-x: 40%;
+  span {
+    position: absolute;
+    margin-left: -20px;
+    margin-top: -20px;
+    padding: 0.4rem;
+    font-size: 1.4rem;
+    background-color: #e7685d;
+    font-family: "Shrikhand", serif;
+  }
+  &:nth-child(1) {
+    background-image: url('../../assets/placeholders/placeholder1.jpg');
+  }
+  &:nth-child(2) {
+    background-image: url('../../assets/placeholders/placeholder2.jpg');
+  }
+  &:nth-child(3) {
+    background-image: url('../../assets/placeholders/placeholder3.jpg');
+  }
+}
+
+.featured-post{
+  width: 100%;
+  background-color: white;
+  margin: 2rem 0;
+  .banner-img {
+    height: 350px;
+    background-image: url('../../assets/placeholders/placeholder5.jpg');
+    background-size: 100%;
+  }
+  .post-preview {
+    padding: 1rem;
+    .info {
+      display: flex;
+      img {
+        height: 70px;
+        margin-right: 1rem;
+      }
+    }
+    min-height: 250px;
+  }
+}

@@ -1,35 +1,36 @@
 @import '../variables';
 
 header {
-  // background-color: purple;
-  // width: 100%;
   padding: $normal 0;
 }
 
 .banner {
-  // background-color: pink;
   display: flex;
-  min-height: 300px;
-  // height: 18rem;
-  // width: 100%;
+  min-height: 210px;
   h1 {
-    // background-color: orange;
-    // flex-grow: 2;
     text-align: center;
     font-family: 'Arbutus Slab', serif;
-    font-size: 4rem; // $large-text
+    font-size: 3.5rem; // $large-text
+    margin: 0;
 
   }
   > * {
-    // flex-grow: 1;
-    width: 33.33%;
+    width: 30%;
+  }
+  > *:nth-child(2){
+    width: 40%;
+    img {
+      margin-left: -3rem;
+      height: 3rem;
+      -webkit-transform: rotate(-14deg);
+      transform: rotate(-14deg);
+    }
   }
   div:first-child {
-    // background-color: gray;
     position: relative;
     img {
-      height: 300px;
-      margin-bottom: -5px;
+      height: 220px;
+      margin-bottom: -4px;
       bottom: 0;
       position: absolute;
     }
@@ -45,8 +46,21 @@ section {
   background-color: $navy;
   display: flex;
   justify-content: space-between;
-  height: 4rem;
+  align-items: center;
+  height: 64px;
+  padding: 0 1rem;
+
   .home {
     display: flex;
+    position: relative;
+  }
+  .current {
+    background-color: white;
+    position: absolute;
+    left: 57px;
+    top: 22px;
+    font-size: 25px;
+    padding: 0.4rem 0.7rem;
+    font-family: "Shrikhand", serif;
   }
 }

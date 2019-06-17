@@ -1,11 +1,34 @@
+@import '../variables';
+
 footer {
-  background-color: red;
-  height: 60px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  background-color: $navy;
   padding: 1rem;
+
+  .container {
+    margin: auto;
+    padding: 0 1rem;
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+nav {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  a {
+    color: #a7a9ac;
+    font-family: 'Arbutus Slab', serif;
+    font-size: 1rem;
+    margin: 8px;
+    &.active {
+      color: white;
+      font-size: 1.3rem;
+    }
+  }
+  img {
+    height: 40px;
+    width: 40px;
+    margin: 8px;
+  }
 }

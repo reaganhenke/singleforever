@@ -3,8 +3,20 @@ body {
    margin:0;
    padding:0;
    height:100%;
+   font-size: 16px;
 }
 
 body {
   background: repeating-linear-gradient(to right, #88d1ce, #88d1ce 25px, #79c6c1 25px, #79c6c1 40px);
+}
+
+
+.icon {
+  height: 32px;
+  width: 32px;
+}
+
+.icon-l {
+  height: 40px;
+  width: 40px;
 }
