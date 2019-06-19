@@ -1,13 +1,12 @@
-@import '../variables';
+@import "../variables";
 
 footer {
   background-color: $navy;
-  padding: 1rem;
-
+  padding: $medium;
   .container {
     margin: auto;
-    padding: 0 1rem;
-    max-width: 1170px;
+    padding: 0 $medium;
+    max-width: $fixed-maxwidth;
     display: flex;
     justify-content: space-between;
   }
@@ -21,16 +20,15 @@ nav {
 .page-links a {
   color: $gray;
   font-family: $arbutus;
-  font-size: 1rem;
-  margin: 8px;
+  margin: $fixed-s;
   &.active {
-      color: white;
-      font-size: 1.3rem;
-    }
+    color: $white;
+    font-size: $large-font;
   }
-  &:last-child img {
-    height: 40px;
-    width: 40px;
-    margin: 8px;
-  }
+}
+
+.external-links img {
+  height: $fixed-m;
+  width: $fixed-m;
+  margin: $fixed-s;
 }

@@ -1,6 +1,8 @@
+@import "../variables";
+
 main {
   margin: 4rem auto;
-  max-width: 940px;
+  max-width: 944px;
   height: 100%;
 }
 
@@ -10,19 +12,19 @@ nav {
 }
 
 a {
-  height: 200px;
-  width: 200px;
-  border: 10px solid white;
+  height: $fixed-xl;
+  width: $fixed-xl;
+  border: 12px solid $white;
   background-size: auto 100%;
   background-position-x: 40%;
   span {
     position: absolute;
-    margin-left: -20px;
-    margin-top: -20px;
-    padding: 0.4rem;
-    font-size: 1.4rem;
-    background-color: #e7685d;
-    font-family: "Shrikhand", serif;
+    margin-left: -24px;
+    margin-top: -24px;
+    padding: $x-small $small;
+    font-size: $large-font;
+    background-color: $salmon;
+    font-family: $shrikhand;
   }
   &:nth-child(1) {
     background-image: url("../../assets/placeholders/placeholder1.jpg");
@@ -37,8 +39,8 @@ a {
 
 .featured-post {
   width: 100%;
-  background-color: white;
-  margin: 2rem 0;
+  background-color: $white;
+  margin: $large 0;
 }
 
 .banner-img {
@@ -48,15 +50,15 @@ a {
 }
 
 .post-preview {
-  padding: 1rem 2rem;
-  min-height: 250px;
+  padding: $medium $large;
+  min-height: $fixed-xl;
 }
 
 .info {
   display: flex;
   img {
-    height: 70px;
-    margin-right: 1rem;
+    height: $fixed-l;
+    margin-right: $medium;
   }
 }
 
@@ -64,14 +66,14 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding: 0.5em 0;
+  padding: $small 0;
 }
 
 .tag-group span {
-  background-color: pink;
-  border-radius: 0.25rem;
-  padding: 0.2rem 0.5rem;
-  margin: 0.2rem;
+  background-color: $salmon;
+  border-radius: $x-small;
+  padding: $x-small $small;
+  margin: $x-small;
   &:first-child {
     margin-left: 0;
   }
