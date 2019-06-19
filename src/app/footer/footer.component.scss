@@ -16,12 +16,14 @@ footer {
 nav {
   display: flex;
   align-items: center;
-  &:first-child a {
-    color: #a7a9ac;
-    font-family: 'Arbutus Slab', serif;
-    font-size: 1rem;
-    margin: 8px;
-    &.active {
+}
+
+.page-links a {
+  color: $gray;
+  font-family: $arbutus;
+  font-size: 1rem;
+  margin: 8px;
+  &.active {
       color: white;
       font-size: 1.3rem;
     }
