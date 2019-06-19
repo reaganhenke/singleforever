@@ -16,7 +16,7 @@ footer {
 nav {
   display: flex;
   align-items: center;
-  a {
+  &:first-child a {
     color: #a7a9ac;
     font-family: 'Arbutus Slab', serif;
     font-size: 1rem;
@@ -26,7 +26,7 @@ nav {
       font-size: 1.3rem;
     }
   }
-  img {
+  &:last-child img {
     height: 40px;
     width: 40px;
     margin: 8px;

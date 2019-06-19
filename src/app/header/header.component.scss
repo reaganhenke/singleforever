@@ -1,4 +1,4 @@
-@import '../variables';
+@import "../variables";
 
 header {
   padding: $normal 0;
@@ -7,18 +7,35 @@ header {
 .banner {
   display: flex;
   min-height: 210px;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.header-image,
+.mock-text {
+  width: 30%;
+}
+
+.header-image {
+  position: relative;
+  img {
+    height: 220px;
+    margin-bottom: -4px;
+    bottom: 0;
+    position: absolute;
+  }
+}
+
+.header-text {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   h1 {
     text-align: center;
-    font-family: 'Arbutus Slab', serif;
+    font-family: "Arbutus Slab", serif;
     font-size: 3.5rem; // $large-text
     margin: 0;
-
-  }
-  > * {
-    width: 30%;
-  }
-  > *:nth-child(2){
-    width: 40%;
     img {
       margin-left: -3rem;
       height: 3rem;
@@ -26,41 +43,33 @@ header {
       transform: rotate(-14deg);
     }
   }
-  div:first-child {
-    position: relative;
-    img {
-      height: 220px;
-      margin-bottom: -4px;
-      bottom: 0;
-      position: absolute;
-    }
-  }
-  div:nth-child(2) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
 }
 
 section {
   background-color: $navy;
+  height: 64px;
+  padding: 0 2rem;
+}
+
+.container {
+  height: 100%;
+  margin: auto;
+  max-width: 1100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
-  padding: 0 1rem;
+}
 
-  .home {
-    display: flex;
-    position: relative;
-  }
-  .current {
-    background-color: white;
-    position: absolute;
-    left: 57px;
-    top: 22px;
-    font-size: 25px;
-    padding: 0.4rem 0.7rem;
-    font-family: "Shrikhand", serif;
-  }
+.home {
+  display: flex;
+  position: relative;
+}
+.current {
+  background-color: white;
+  position: absolute;
+  left: 57px;
+  top: 22px;
+  font-size: 25px;
+  padding: 0.4rem 0.7rem;
+  font-family: "Shrikhand", serif;
 }
