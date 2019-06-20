@@ -45,6 +45,41 @@ header {
   }
 }
 
+.bubble {
+  background-color: $white;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  position: relative;
+  margin-bottom: 0.25rem;
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -$small;
+    border-top: 0.75rem solid $white;
+    border-left: $medium solid transparent;
+    border-right: $x-small solid transparent;
+    transform: rotate(-14deg);
+  }
+}
+
+.mock-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $sans;
+  padding: $medium;
+  box-sizing: border-box;
+  span {
+    font-size: 0.75rem;
+    color: #494949;
+    text-align: right;
+    display: block;
+  }
+}
+
+
+
 section {
   background-color: $navy;
   height: $fixed-l;
