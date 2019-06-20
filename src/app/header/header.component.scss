@@ -78,8 +78,6 @@ header {
   }
 }
 
-
-
 section {
   background-color: $navy;
   height: $fixed-l;
@@ -98,7 +96,14 @@ section {
 .home {
   display: flex;
   position: relative;
+  a {
+    height: 40px;
+    width: 40px;
+    background-image: url("../../assets/icons/home.svg");
+    background-repeat: no-repeat;
+  }
 }
+
 .current {
   background-color: $white;
   position: absolute;
@@ -107,4 +112,17 @@ section {
   font-size: 1.75rem;
   padding: $x-small 0.75rem;
   font-family: $shrikhand;
+}
+
+.search {
+  button {
+    height: $fixed-m;
+    width: $fixed-m;
+    background-image: url("../../assets/icons/search.svg");
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    padding: 0;
+    cursor: pointer;
+  }
 }
