@@ -2,6 +2,7 @@
 
 main {
   margin: 4rem auto;
+  padding: 0 $large;
   max-width: 944px;
   height: 100%;
 }
@@ -52,6 +53,9 @@ a {
 .post-preview {
   padding: $medium $large;
   min-height: $fixed-xl;
+  h2 {
+    font-family: $arbutus;
+  }
 }
 
 .info {
@@ -67,6 +71,10 @@ a {
   flex-direction: column;
   justify-content: space-around;
   padding: $small 0;
+}
+
+.tag-group {
+  margin-top: $small;
 }
 
 .tag-group span {
