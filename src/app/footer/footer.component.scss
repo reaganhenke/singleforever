@@ -21,14 +21,20 @@ nav {
   color: $gray;
   font-family: $arbutus;
   margin: $fixed-s;
+  text-decoration: none;
   &.active {
     color: $white;
     font-size: $large-font;
   }
 }
 
-.external-links img {
-  height: $fixed-m;
-  width: $fixed-m;
-  margin: $fixed-s;
+.external-links {
+  a {
+    display: inline-flex;
+    img {  
+      height: $fixed-m;
+      width: $fixed-m;
+      margin: $fixed-s;
+    }
+  }
 }
