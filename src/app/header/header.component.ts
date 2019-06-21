@@ -1,21 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router, NavigationEnd } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent implements OnInit, OnDestroy {
   showSearch = false;
+  togglingSearch = false;
+  currUrl: string;
+  navListener: Subscription;
+
   searchForm = new FormGroup({
     searchInput: new FormControl({value: '', disabled: true})
   });
-  togglingSearch = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+    this.navListener = this.router.events
+      .pipe(filter(e => e instanceof NavigationEnd))
+      .subscribe((navEnd: NavigationEnd) => {
+        const currentUrl = navEnd.urlAfterRedirects.substring(1);
+        this.currUrl = currentUrl ? currentUrl : 'home';
+      });
   }
 
   toggleSearch() {
@@ -39,4 +51,7 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  ngOnDestroy() {
+    this.navListener.unsubscribe();
+  }
 }

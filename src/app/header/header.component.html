@@ -21,9 +21,9 @@
   <section>
     <div class="container">
       <div class="home">
-        <a href="/" aria-label="home"></a>
+        <a routerLink="/" aria-label="home"></a>
         <div class="current">
-          home
+          {{currUrl}}
         </div>
       </div>
       <div class="search" [formGroup]="searchForm">
