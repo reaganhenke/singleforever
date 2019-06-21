@@ -1,12 +1,12 @@
 <header>
   <div class="banner">
     <div class="header-image">
-      <img src="assets/girl.svg" alt="girl texting"/>
+      <img src="assets/girl.svg" alt="girl texting" />
     </div>
     <div class="header-text">
       <h1>
-        <img src="assets/icons/heart.svg" alt="heart"/>
-        how to be<br>single forever
+        <img src="assets/icons/heart.svg" alt="heart" />
+        how to be<br />single forever
       </h1>
     </div>
     <div class="mock-text">
@@ -15,7 +15,7 @@
           are you ignoring me?
         </div>
         <span>read 12:10pm</span>
-    </div>
+      </div>
     </div>
   </div>
   <section>
@@ -26,8 +26,11 @@
           home
         </div>
       </div>
-      <div class="search">
-        <button (click)="test()" aria-label="search"></button>
+      <div class="search" [formGroup]="searchForm">
+        <input type="text" *ngIf="!searchForm.get('searchInput').disabled"
+          [class.show]="showSearch" formControlName="searchInput" id="searchInput"/>
+        <button (click)="toggleSearch()" aria-label="toggle search input"
+          [attr.aria-expanded]="!searchForm.get('searchInput').disabled"></button>
       </div>
     </div>
   </section>

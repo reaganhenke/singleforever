@@ -51,6 +51,7 @@ header {
   padding: 0.5rem 1rem;
   position: relative;
   margin-bottom: 0.25rem;
+  font-size: 0.9rem;
   &::after {
     content: "";
     position: absolute;
@@ -115,6 +116,26 @@ section {
 }
 
 .search {
+  display: flex;
+  input {
+    font-size: 1rem;
+    color: $white;
+    opacity: 0;
+    width: 0;
+    border: none;
+    border-bottom: 3px solid $salmon;
+    background-color: transparent;
+    margin-right: $small;
+    transition: width 0.5s, opacity 0s 1s;
+    &:focus {
+      outline: none;
+    }
+    &.show {
+      width: $fixed-xl;
+      opacity: 1;
+      transition: width 0.5s, opacity 0s;
+    }    
+  }
   button {
     height: $fixed-m;
     width: $fixed-m;
