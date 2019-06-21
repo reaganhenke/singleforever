@@ -6,7 +6,24 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-  }, {
+  },
+  {
+    path: 'quizzes',
+    component: HomeComponent,
+  },
+  {
+    path: 'dating',
+    component: HomeComponent,
+  },
+  {
+    path: 'lifestyle',
+    component: HomeComponent,
+  },
+  {
+    path: 'about',
+    component: HomeComponent,
+  },
+  {
     path: '**',
     redirectTo: '',
   }];
