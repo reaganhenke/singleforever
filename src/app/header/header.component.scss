@@ -9,6 +9,7 @@ header {
   min-height: $fixed-xl;
   max-width: $fixed-maxwidth;
   margin: auto;
+  padding: 0 2rem;
 }
 
 .header-image,
@@ -97,6 +98,7 @@ section {
 .home {
   display: flex;
   position: relative;
+  align-items: center;
   a {
     height: 40px;
     width: 40px;
@@ -117,6 +119,8 @@ section {
 
 .search {
   display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
   input {
     font-size: 1rem;
     color: $white;
@@ -134,7 +138,7 @@ section {
       width: $fixed-xl;
       opacity: 1;
       transition: width 0.5s, opacity 0s;
-    }    
+    }
   }
   button {
     height: $fixed-m;
@@ -145,5 +149,72 @@ section {
     background-repeat: no-repeat;
     padding: 0;
     cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .mock-text {
+    display: none;
+  }
+
+  .header-text {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .banner {
+    min-height: 0;
+    padding: 0 1rem 1rem;
+  }
+
+  .header-image {
+    display: none;
+  }
+
+  .header-text {
+    width: 100%;
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  section {
+    padding: 0 1rem;
+  }
+
+  .current {
+    background-color: transparent;
+    position: relative;
+    font-size: 1.5rem;
+    color: $white;
+    left: 0;
+    top: 0;
+  }
+
+  .home a {
+    height: 32px;
+    width: 32px;
+  }
+
+  .search button {
+    height: 28px;
+    width: 28px;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .current.no-show {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .header-text img {
+    display: none;
+  }
+
+  .search input.show {
+    width: calc(95% - 44px);
   }
 }

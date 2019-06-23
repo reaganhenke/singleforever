@@ -87,3 +87,19 @@ a {
     margin-left: 0;
   }
 }
+
+@media only screen and (max-width : 800px) {
+  nav {
+    flex-direction: column;
+    a {
+      width: 100%;
+      margin: 1rem 0;
+      box-sizing: border-box;
+      background-size: 100%;
+      background-position-y: 35%;
+      @media only screen and (max-width : 365px) {
+        background-size: auto 100%;
+      }
+    }
+  }
+}
