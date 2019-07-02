@@ -31,10 +31,20 @@ nav {
 .external-links {
   a {
     display: inline-flex;
-    img {  
+    img {
       height: $fixed-m;
       width: $fixed-m;
       margin: $fixed-s;
     }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .page-links {
+    display: none;
+  }
+
+  footer .container {
+    justify-content: center;
   }
 }
