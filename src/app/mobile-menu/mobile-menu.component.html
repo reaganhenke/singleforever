@@ -1,0 +1,20 @@
+<div *ngIf="!closed; else openMenu" cdkTrapFocus>
+  <nav [class.show]="opening">
+    <div class="links">
+        <a routerLink="quizzes" routerLinkActive="active" (click)="toggleMenu()">quizzes</a>
+        <a routerLink="dating" routerLinkActive="active" (click)="toggleMenu()">dating</a>
+        <a routerLink="lifestyle" routerLinkActive="active" (click)="toggleMenu()">lifestyle</a>
+        <a routerLink="about" routerLinkActive="active" (click)="toggleMenu()">about</a>
+    </div>
+  </nav>
+
+  <button (click)="toggleMenu()" (mousedown)="$event.preventDefault()">
+    <img src="assets/icons/close.svg" alt="close navigation menu" />
+  </button>
+</div>
+
+<ng-template #openMenu>
+  <button *ngIf="closed; else mobileMenu" (click)="toggleMenu()" (mousedown)="$event.preventDefault()">
+    <img src="assets/icons/menu.svg" alt="open navigation menu" />
+  </button>
+</ng-template>

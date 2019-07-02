@@ -15,6 +15,7 @@ footer {
 nav {
   display: flex;
   align-items: center;
+  font-size: 1rem;
 }
 
 .page-links a {
@@ -24,27 +25,46 @@ nav {
   text-decoration: none;
   &.active {
     color: $white;
-    font-size: $large-font;
+    font-size: 1.4em;
   }
 }
 
-.external-links {
-  a {
-    display: inline-flex;
-    img {
-      height: $fixed-m;
-      width: $fixed-m;
-      margin: $fixed-s;
-    }
+.external-links a {
+  display: inline-flex;
+  img {
+    height: $fixed-m;
+    width: $fixed-m;
+    margin: $fixed-s;
   }
 }
 
 @media only screen and (max-width: 600px) {
+  .page-links {
+    font-size: 12px;
+    a {
+      margin: 0 8px 0 0;
+    }
+  }
+
+  .external-links a img{
+    height: 28px;
+    width: 28px;
+    margin: 4px;
+  }
+}
+
+@media only screen and (max-width: 414px) {
   .page-links {
     display: none;
   }
 
   footer .container {
     justify-content: center;
+  }
+
+  .external-links a img{
+    height: $fixed-m;
+    width: $fixed-m;
+    margin: $fixed-s;
   }
 }

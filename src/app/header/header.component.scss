@@ -202,15 +202,17 @@ section {
     width: 28px;
   }
 
-// add floating nav
-
-
-
 }
 
 @media only screen and (max-width: 460px) {
   .current.no-show {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .header-text {
+    padding-right: 2rem;
   }
 }
 

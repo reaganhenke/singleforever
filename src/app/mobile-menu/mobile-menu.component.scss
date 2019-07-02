@@ -1,0 +1,68 @@
+@import "../variables";
+
+nav {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 99;
+}
+
+button {
+  z-index: 999;
+  display: none;
+}
+
+.links {
+  height: 100%;
+  width: 0%;
+  background-color: $navy;
+  margin: 0;
+  right: 0;
+  position: absolute;
+  transition: width 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+nav.show .links {
+  width: 80%;
+  a {
+    opacity: 1;
+  }
+}
+
+a {
+  opacity: 0;
+  transition: opacity 0.2s, padding 0.2s;
+  color: $gray;
+  text-decoration: none;
+  font-size: 2rem;
+  width: 90%;
+  text-align: center;
+}
+
+.active {
+  color: $white;
+  border: 1px solid $white;
+  border-width: 2px 0;
+  padding: 0.5rem 0;
+}
+
+@media only screen and (max-width: 414px) {
+  button {
+    display: block;
+    position: absolute;
+    right: 8px;
+    top: 16px;
+    background-color: $navy;
+    border-radius: 50%;
+    height: 56px;
+    width: 56px;
+    border: none;
+    padding: 17px 12px;
+    cursor: pointer;
+  }
+}
