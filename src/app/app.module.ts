@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { A11yModule } from '@angular/cdk/a11y';
 
 @NgModule({
@@ -14,7 +15,8 @@ import { A11yModule } from '@angular/cdk/a11y';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    HomeComponent,
+    MobileMenuComponent
   ],
   imports: [
     BrowserModule,
