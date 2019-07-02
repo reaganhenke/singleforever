@@ -19,12 +19,14 @@ export class MobileMenuComponent implements OnInit {
       this.closed = false;
       setTimeout(() => {
         this.opening = true;
-        window.onscroll = () => { window.scrollTo(0, 0); };
+        document.body.style.overflow = 'hidden';
       }, 10);
     } else {
       this.opening = false;
-      window.onscroll = () => {};
-      setTimeout(() => { this.closed = true; }, 500);
+      setTimeout(() => {
+        this.closed = true;
+        document.body.style.overflow = 'visible';
+      }, 500);
     }
   }
 }
