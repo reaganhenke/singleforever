@@ -1,4 +1,4 @@
-<div class="full">
+<div class="full" [class.show]="!closed">
   <div *ngIf="!closed; else openMenu" cdkTrapFocus>
     <nav [class.show]="opening">
       <div class="backdrop" (click)="toggleMenu()"></div>

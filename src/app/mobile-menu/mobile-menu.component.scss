@@ -2,9 +2,14 @@
 
 .full {
   position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+.full.show {
   width: 100%;
   height: 100%;
-  top: 0;
 }
 
 nav {
@@ -37,7 +42,16 @@ nav {
 
 button {
   z-index: 999;
-  display: none;
+  position: absolute;
+  right: 8px;
+  top: 16px;
+  background-color: $navy;
+  border-radius: 50%;
+  height: 56px;
+  width: 56px;
+  border: none;
+  padding: 17px 12px;
+  cursor: pointer;
 }
 
 nav.show .links {
@@ -69,17 +83,7 @@ a {
 }
 
 @media only screen and (max-width: 414px) {
-  button {
+  .full {
     display: block;
-    position: absolute;
-    right: 8px;
-    top: 16px;
-    background-color: $navy;
-    border-radius: 50%;
-    height: 56px;
-    width: 56px;
-    border: none;
-    padding: 17px 12px;
-    cursor: pointer;
   }
 }
