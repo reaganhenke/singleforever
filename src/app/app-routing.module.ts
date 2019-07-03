@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+import { DatingComponent } from './dating/dating.component';
+import { LifestyleComponent } from './lifestyle/lifestyle.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   {
@@ -9,19 +13,19 @@ const routes: Routes = [
   },
   {
     path: 'quizzes',
-    component: HomeComponent,
+    component: QuizzesComponent,
   },
   {
     path: 'dating',
-    component: HomeComponent,
+    component: DatingComponent,
   },
   {
     path: 'lifestyle',
-    component: HomeComponent,
+    component: LifestyleComponent,
   },
   {
     path: 'about',
-    component: HomeComponent,
+    component: AboutComponent,
   },
   {
     path: '**',
@@ -29,7 +33,9 @@ const routes: Routes = [
   }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

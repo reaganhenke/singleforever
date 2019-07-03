@@ -9,6 +9,11 @@ import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { A11yModule } from '@angular/cdk/a11y';
+import { QuizzesComponent } from './quizzes/quizzes.component';
+import { DatingComponent } from './dating/dating.component';
+import { LifestyleComponent } from './lifestyle/lifestyle.component';
+import { AboutComponent } from './about/about.component';
+import { RedFlagsComponent } from './quizzes/quizlist/red-flags/red-flags.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { A11yModule } from '@angular/cdk/a11y';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    MobileMenuComponent
+    MobileMenuComponent,
+    QuizzesComponent,
+    DatingComponent,
+    LifestyleComponent,
+    AboutComponent,
+    RedFlagsComponent
   ],
   imports: [
     BrowserModule,
