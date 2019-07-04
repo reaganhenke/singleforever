@@ -3,10 +3,11 @@
     <nav [class.show]="opening">
       <div class="backdrop" (click)="toggleMenu()"></div>
       <div class="links">
-          <a routerLink="quizzes" routerLinkActive="active" (click)="toggleMenu()">quizzes</a>
-          <a routerLink="dating" routerLinkActive="active" (click)="toggleMenu()">dating</a>
-          <a routerLink="lifestyle" routerLinkActive="active" (click)="toggleMenu()">lifestyle</a>
-          <a routerLink="about" routerLinkActive="active" (click)="toggleMenu()">about</a>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="toggleMenu()">home</a>
+        <a routerLink="quizzes" routerLinkActive="active" (click)="toggleMenu()">quizzes</a>
+        <a routerLink="dating" routerLinkActive="active" (click)="toggleMenu()">dating</a>
+        <a routerLink="lifestyle" routerLinkActive="active" (click)="toggleMenu()">lifestyle</a>
+        <a routerLink="about" routerLinkActive="active" (click)="toggleMenu()">about</a>
       </div>
     </nav>
 
