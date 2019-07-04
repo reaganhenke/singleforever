@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { QuizzesComponent } from './quizzes/quizzes.component';
 import { DatingComponent } from './dating/dating.component';
 import { LifestyleComponent } from './lifestyle/lifestyle.component';
 import { AboutComponent } from './about/about.component';
@@ -13,7 +12,7 @@ const routes: Routes = [
   },
   {
     path: 'quizzes',
-    component: QuizzesComponent,
+    loadChildren: () => import('./quizzes/quizzes.module').then(mod => mod.QuizzesModule)
   },
   {
     path: 'dating',

@@ -9,11 +9,9 @@ import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { A11yModule } from '@angular/cdk/a11y';
-import { QuizzesComponent } from './quizzes/quizzes.component';
 import { DatingComponent } from './dating/dating.component';
 import { LifestyleComponent } from './lifestyle/lifestyle.component';
 import { AboutComponent } from './about/about.component';
-import { QuizzesModule } from './quizzes/quiz-list/quizzes.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +20,6 @@ import { QuizzesModule } from './quizzes/quiz-list/quizzes.module';
     FooterComponent,
     HomeComponent,
     MobileMenuComponent,
-    QuizzesComponent,
     DatingComponent,
     LifestyleComponent,
     AboutComponent
@@ -31,8 +28,7 @@ import { QuizzesModule } from './quizzes/quiz-list/quizzes.module';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    A11yModule,
-    QuizzesModule
+    A11yModule
   ],
   providers: [],
   bootstrap: [AppComponent]
