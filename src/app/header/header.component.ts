@@ -25,7 +25,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.navListener = this.router.events
       .pipe(filter(e => e instanceof NavigationEnd))
       .subscribe((navEnd: NavigationEnd) => {
-        const currentUrl = navEnd.urlAfterRedirects.substring(1);
+        const currentUrl = navEnd.urlAfterRedirects.split('/')[1];
         this.currUrl = currentUrl ? currentUrl : 'home';
       });
   }
