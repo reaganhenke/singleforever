@@ -13,7 +13,7 @@ import { QuizzesComponent } from './quizzes/quizzes.component';
 import { DatingComponent } from './dating/dating.component';
 import { LifestyleComponent } from './lifestyle/lifestyle.component';
 import { AboutComponent } from './about/about.component';
-import { RedFlagsComponent } from './quizzes/quizlist/red-flags/red-flags.component';
+import { QuizzesModule } from './quizzes/quiz-list/quizzes.module';
 
 @NgModule({
   declarations: [
@@ -25,14 +25,14 @@ import { RedFlagsComponent } from './quizzes/quizlist/red-flags/red-flags.compon
     QuizzesComponent,
     DatingComponent,
     LifestyleComponent,
-    AboutComponent,
-    RedFlagsComponent
+    AboutComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    A11yModule
+    A11yModule,
+    QuizzesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
