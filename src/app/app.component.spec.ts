@@ -1,6 +1,25 @@
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-header',
+  template: '<p>Mock Header</p>'
+})
+class MockHeaderComponent {}
+
+@Component({
+  selector: 'app-footer',
+  template: '<p>Mock Footer</p>'
+})
+class MockFooterComponent {}
+
+@Component({
+  selector: 'app-mobile-menu',
+  template: '<p>Mock Mobile Menu</p>'
+})
+class MockMobileMenuComponent {}
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +28,10 @@ describe('AppComponent', () => {
         RouterTestingModule
       ],
       declarations: [
-        AppComponent
+        AppComponent,
+        MockHeaderComponent,
+        MockFooterComponent,
+        MockMobileMenuComponent
       ],
     }).compileComponents();
   }));
@@ -26,10 +48,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('single-forever');
   });
 
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to single-forever!');
-  });
 });
