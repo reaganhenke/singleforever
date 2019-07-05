@@ -1,53 +1,5 @@
 @import "../variables";
 
-// ABSTRACT
-
-.featured-post {
-  width: 100%;
-  background-color: $white;
-  margin: $large 0;
-}
-
-.banner-img {
-  width: 100%;
-  object-fit: cover;
-  max-height: 350px;
-}
-
-.post-preview {
-  padding: $medium $large;
-  min-height: $fixed-xl;
-  overflow: scroll;
-  h2 {
-    font-family: $arbutus;
-  }
-}
-
-.info {
-  display: flex;
-  img {
-    height: $fixed-l;
-    margin-right: $medium;
-  }
-}
-
-.tag-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.tag-group span {
-  background-color: $salmon;
-  border-radius: $x-small;
-  padding: $x-small $small;
-  margin: $small $small 0 0;
-}
-
-// copy the responsiveness as well!!
-
-// end copied
-
 .featured-post {
   cursor: pointer;
 }
@@ -56,6 +8,6 @@ a {
   color: #000;
   text-decoration: none;
   &:hover {
-    color: #202F85;
+    color: $link-hover;
   }
 }

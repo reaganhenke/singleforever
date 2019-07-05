@@ -32,27 +32,6 @@ a {
   }
 }
 
-.featured-post {
-  width: 100%;
-  background-color: $white;
-  margin: $large 0;
-}
-
-.banner-img {
-  width: 100%;
-  object-fit: cover;
-  max-height: 350px;
-}
-
-.post-preview {
-  padding: $medium $large;
-  min-height: $fixed-xl;
-  overflow: scroll;
-  h2 {
-    font-family: $arbutus;
-  }
-}
-
 .info {
   display: flex;
   img {

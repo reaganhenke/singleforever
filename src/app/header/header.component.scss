@@ -152,7 +152,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: $screen-medium) {
   .mock-text {
     display: none;
   }
@@ -162,7 +162,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: $screen-tablet) {
   .banner {
     min-height: 0;
     padding: 0 1rem 1rem;
@@ -210,7 +210,7 @@ section {
   }
 }
 
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: $screen-mobile) {
   .header-text {
     padding-right: 2rem;
   }
