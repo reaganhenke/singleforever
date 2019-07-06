@@ -58,7 +58,7 @@ describe('HeaderComponent', () => {
       expect(component.showSearch).toBeFalsy();
       expect(component.togglingSearch).toBeTruthy();
       expect(setTimeout).toHaveBeenCalledWith(jasmine.any(Function), 500);
-      jest.advanceTimersByTime(501);
+      jest.advanceTimersByTime(500);
       expect(component.searchForm.get('searchInput').enabled).toBeFalsy();
       expect(component.togglingSearch).toBeFalsy();
 
@@ -74,7 +74,7 @@ describe('HeaderComponent', () => {
       component.toggleSearch();
       expect(component.togglingSearch).toBeTruthy();
       expect(component.searchForm.get('searchInput').enabled).toBeTruthy();
-      jest.advanceTimersByTime(11);
+      jest.advanceTimersByTime(10);
       expect(component.showSearch).toBeTruthy();
       jest.advanceTimersByTime(490);
       expect(component.togglingSearch).toBeFalsy();
