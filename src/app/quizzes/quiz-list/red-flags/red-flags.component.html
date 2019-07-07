@@ -1,3 +1,16 @@
-<p>
-  red-flags works!
-</p>
+<div class="white-block">
+  <span class="label">quiz</span>
+  <h2>How many red flags can you find?</h2>
+  <div class="author">
+    <img src="assets/avatar.svg" alt=""/>
+  </div>
+  <article>
+    <form [formGroup]="redFlagsForm">
+      <div class="form-field" *ngFor="let flag of flags; let index=index;">
+        <input type="checkbox" id="checkbox-{{index}}" formControlName="{{flag}}" (mousedown)="$event.preventDefault()"/>
+        <span></span><label for="checkbox-{{index}}">{{flag}}</label>
+      </div>
+      <button (click)="submit()"></button>
+    </form>
+  </article>
+</div>

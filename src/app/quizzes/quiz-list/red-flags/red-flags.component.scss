@@ -1,0 +1,85 @@
+@import "../../../variables";
+
+.white-block {
+  position: relative;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.label {
+  position: absolute;
+  right: 0.5rem;
+  top: -1.5rem;
+  width: $fixed-l;
+  height: $fixed-l;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $salmon;
+  letter-spacing: 0.06rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: $shrikhand;
+  transform: rotate(10deg);
+}
+
+.author img {
+  height: $fixed-l;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  input[type="checkbox"] {
+    position: absolute;
+    height: 19px;
+    width: 19px;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+
+    &:focus ~ span {
+      outline: -webkit-focus-ring-color auto 5px;
+    }
+
+    &:checked ~ span::after {
+      display: block;
+    }
+  }
+
+  span {
+    height: 14px;
+    width: 14px;
+    margin: 4px;
+    border: 3px solid $salmon;
+    border-radius: 3px;
+    position: relative;
+    pointer-events: none;
+
+  }
+
+  span::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 4px;
+    height: 10px;
+    width: 4px;
+    border: solid $salmon;
+    border-width: 0px 2px 2px 0px;
+    transform: rotate(45deg);
+    display: none;
+  }
+}
