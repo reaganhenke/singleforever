@@ -28,10 +28,6 @@ h2 {
   transform: rotate(10deg);
 }
 
-.author img {
-  height: $fixed-l;
-}
-
 form {
   display: flex;
   flex-direction: column;
@@ -82,4 +78,46 @@ form {
     transform: rotate(45deg);
     display: none;
   }
+}
+
+button {
+  margin: 1rem;
+}
+
+.results {
+  border: solid $salmon;
+  border-width: 2rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column; 
+}
+
+.results>div {
+  display: flex;
+}
+
+
+.graph {
+  position: relative;
+  width: 40px;
+  height: 150px;
+  background-color: #ddd;
+  margin: 2rem 1rem;
+  border-radius: 4px;
+  &::before {
+    content: "15%";
+    top: -18px;
+    left: -1px;
+    position: absolute;
+    color: crimson;
+    font-size: 0.9rem;
+  }
+}
+
+.bar {
+  border-radius: 4px;
+  position: absolute;
+  bottom: 0;
+  height: 80%;
+  width: 100%;
+  background-color: $salmon;
 }

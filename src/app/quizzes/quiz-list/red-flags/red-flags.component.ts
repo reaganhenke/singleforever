@@ -10,6 +10,7 @@ import { flagList } from './models/red-flags.model';
 export class RedFlagsComponent implements OnInit {
 
   redFlagsForm: FormGroup;
+  results = true;
 
   constructor(private formBuilder: FormBuilder) { }
 
