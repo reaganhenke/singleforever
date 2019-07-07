@@ -9,6 +9,9 @@ const routes: Routes = [
   }, {
     path: 'red',
     loadChildren: () => import('./quiz-list/red-flags/red-flags.module').then(mod => mod.RedFlagsModule)
+  }, {
+    path: 'whodate',
+    loadChildren: () => import('./quiz-list/who-date/who-date.module').then(mod => mod.WhoDateModule)
   }
 ];
 

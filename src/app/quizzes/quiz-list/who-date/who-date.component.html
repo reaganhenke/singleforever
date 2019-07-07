@@ -1,0 +1,29 @@
+<div class="white-block">
+    <span class="label">quiz</span>
+    <h2>Who should you date?</h2>
+    <p>The cutie on the metro? Etc.</p>
+    <article>
+      <form [formGroup]="redFlagsForm">
+        <div class="form-field" *ngFor="let flag of flags; let index=index;">
+          <input type="checkbox" id="checkbox-{{index}}" formControlName="{{flag}}" (mousedown)="$event.preventDefault()"/>
+          <span></span><label for="checkbox-{{index}}">{{flag}}</label>
+        </div>
+        <button (click)="submit()">Show me my results!</button>
+      </form>
+      <div *ngIf="results" class="results">
+        <div class="flex">
+          <div class="graph"><div class='bar'></div></div>
+          <div>
+            <h3>You found 0/x?</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloremque odit animi nulla numquam explicabo quis sapient
+          </div>
+        </div>
+        <div class="sharing">
+            share to facebook
+            share to twitter
+            copy link
+          </div>
+      </div>
+    </article>
+  </div>
+  

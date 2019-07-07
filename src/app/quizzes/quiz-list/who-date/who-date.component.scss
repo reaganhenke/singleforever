@@ -1,0 +1,48 @@
+@import "../../../variables";
+
+.white-block {
+  position: relative;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.label {
+  position: absolute;
+  right: 0.5rem;
+  top: -1.5rem;
+  width: $fixed-l;
+  height: $fixed-l;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $salmon;
+  letter-spacing: 0.06rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: $shrikhand;
+  transform: rotate(10deg);
+}
+
+// abstract this ^^^^^
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.results {
+  border: solid $salmon;
+  border-width: 2rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column; 
+}
+
+.results>div {
+  display: flex;
+}
