@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { DatingComponent } from './dating/dating.component';
-import { LifestyleComponent } from './lifestyle/lifestyle.component';
 import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
@@ -16,7 +14,7 @@ const routes: Routes = [
   },
   {
     path: 'dating',
-    component: DatingComponent,
+    loadChildren: () => import('./dating/dating.module').then(mod => mod.DatingModule)
   },
   {
     path: 'lifestyle',
