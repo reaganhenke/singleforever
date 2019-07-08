@@ -1,0 +1,13 @@
+@import "../variables";
+
+.featured-post {
+  cursor: pointer;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    color: $link-hover;
+  }
+}

@@ -20,7 +20,7 @@ const routes: Routes = [
   },
   {
     path: 'lifestyle',
-    component: LifestyleComponent,
+    loadChildren: () => import('./lifestyle/lifestyle.module').then(mod => mod.LifestyleModule)
   },
   {
     path: 'about',
