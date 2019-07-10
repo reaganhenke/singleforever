@@ -95,7 +95,6 @@ button {
   display: flex;
 }
 
-
 .graph {
   position: relative;
   width: 40px;
@@ -103,8 +102,7 @@ button {
   background-color: #ddd;
   margin: 2rem 1rem;
   border-radius: 4px;
-  &::before {
-    content: "15%";
+  span {
     top: -18px;
     left: -1px;
     position: absolute;
@@ -120,4 +118,53 @@ button {
   height: 80%;
   width: 100%;
   background-color: $salmon;
+  transition: 1s height slide
+}
+
+.redo img {
+  height: 24px;
+}
+
+.share-button {
+  padding: 0.5rem;
+  font-size: .875rem;
+  background-color: #3f4165;
+  color: #fff;
+  border-radius: 3px;
+  border: 0;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.2s;
+  white-space: nowrap;
+  cursor: pointer;
+  &:hover, &:focus {
+    background-color: $navy;
+  }
+  img {
+    height: 14px;
+    margin-right: 5px;
+  }
+}
+
+.fb {
+  background-color: #3b5998;
+  &:hover, &:focus {
+    background-color: #1e2e4f;
+  }
+}
+
+.twitter {
+  background-color: #55acee;
+  &:hover, &:focus {
+    background-color: #147bc9;
+  }
+}
+
+.sharing span {
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+  &.show {
+    opacity: 1;
+  }
 }
