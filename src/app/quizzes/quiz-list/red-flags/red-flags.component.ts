@@ -16,6 +16,7 @@ export class RedFlagsComponent implements OnInit {
   finished = false;
   href = 'asdfkhadfkjhdsflkajhdf.com';
   copied = false;
+  heightPercent: string;
 
   constructor(private formBuilder: FormBuilder, private fb: FacebookService) { }
 
@@ -39,11 +40,15 @@ export class RedFlagsComponent implements OnInit {
     console.log(this.redFlagsForm.getRawValue());
     this.results = Object.values(this.redFlagsForm.getRawValue()).filter(val => val).length;
     this.finished = true;
+    this.redFlagsForm.disable();
+    setTimeout(() => this.heightPercent = this.percent, 10);
+
   }
 
   reset() {
     this.redFlagsForm.reset(); // check that this works
     this.finished = false;
+    this.redFlagsForm.enable();
   }
 
   share(url: string) {
@@ -65,7 +70,7 @@ export class RedFlagsComponent implements OnInit {
 
   copySuccess() {
     this.copied = true;
-    setTimeout(() => this.copied = false, 2000);
+    setTimeout(() => this.copied = false, 1000);
   }
 
 }

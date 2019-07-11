@@ -37,6 +37,7 @@ form {
   display: flex;
   align-items: center;
   position: relative;
+  margin: 0.5rem 0;
 
   input[type="checkbox"] {
     position: absolute;
@@ -63,7 +64,6 @@ form {
     border-radius: 3px;
     position: relative;
     pointer-events: none;
-
   }
 
   span::after {
@@ -80,8 +80,29 @@ form {
   }
 }
 
-button {
-  margin: 1rem;
+.form-field.disabled {
+  color: $gray;
+  pointer-events: none;
+
+  span, span::after {
+    border-color: #f9958d;
+  }
+}
+
+.submit-button {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: $salmon;
+  font-family: $crimson;
+  font-size: 1.25rem;
+  border: none;
+  outline: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  &:hover, &:focus {
+    background-color: #c15148;
+  }
 }
 
 .results {
@@ -115,17 +136,29 @@ button {
   border-radius: 4px;
   position: absolute;
   bottom: 0;
-  height: 80%;
+  height: 0%;
   width: 100%;
   background-color: $salmon;
-  transition: 1s height slide
+  transition: 1s height;
 }
 
-.redo img {
-  height: 24px;
+.redo {
+  button {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  img {
+    height: 24px;
+  }
 }
 
 .share-button {
+  margin: 0.5rem;
   padding: 0.5rem;
   font-size: .875rem;
   background-color: #3f4165;
@@ -160,10 +193,43 @@ button {
   }
 }
 
-.sharing span {
+.link-sharing {
+  position: relative;
+}
+
+.link-sharing span {
   opacity: 0;
   transition: opacity 0.5s;
+  background-color: $navy;
+  color: $white;
+  font-size: 0.75rem;
+  border-radius: 3px;
+  padding: 0.25rem;
   position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: -1.5rem;
+  text-align: center;
+  pointer-events: none;
+  font-family: system-ui;
+  white-space: nowrap;
+
+
+  &::after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid $navy;
+    position: absolute;
+    bottom: -5px;
+    left: calc( 50% - 10px);
+
+  }
+
   &.show {
     opacity: 1;
   }

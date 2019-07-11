@@ -4,26 +4,26 @@
   <p>You just started dating someone new. Which of these behaviors are red flags? Select every one that you think might be a problem.</p>
   <article>
     <form [formGroup]="redFlagsForm">
-      <div class="form-field" *ngFor="let flag of flags; let index=index;">
+      <div class="form-field" *ngFor="let flag of flags; let index=index;" [class.disabled]="finished">
         <input type="checkbox" id="checkbox-{{index}}" formControlName="{{flag}}" (mousedown)="$event.preventDefault()"/>
         <span></span><label for="checkbox-{{index}}">{{flag}}</label>
       </div>
-      <button (click)="submit()">Show me my results!</button>
+      <button (click)="submit()" *ngIf="!finished" class="submit-button">Show me my results!</button>
     </form>
-    <div *ngIf="finished || true" class="results">
+    <div *ngIf="finished" class="results">
       <div class="flex">
-        <div class="graph"><span>{{percent}}</span><div class="bar" [style.height] = "percent"></div></div>
+        <div class="graph"><span>{{percent}}</span><div class="bar" [style.height] = "heightPercent"></div></div>
         <div>
           <h3>You caught {{results}}/{{total}}!</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloremque odit animi nulla numquam explicabo quis sapient</p>
-          <div class="redo">Want to try again?<img src="assets/icons/redo.svg" alt="redo"/></div>
+          <div class="redo">Want to try again?<button aria-label="Reset" (click)="reset()"><img src="assets/icons/redo.svg" alt=""/></button></div>
         </div>
       </div>
       <div class="sharing">
         <button class="fb share-button" (click)="share()" aria-label="Share to Facebook"><img src="assets/social-media/facebook.png" alt=""/>Share</button>
         <button class="twitter share-button" (click)="tweet()"><img src="assets/social-media/twitter_white.png" alt=""/>Tweet</button>
-        <div>
-          <span [class.show]="copied">copied successfully</span>
+        <div class="link-sharing">
+          <span [class.show]="copied">copy successful</span>
           <button ngxClipboard [cbContent]="href" class="share-button" (cbOnSuccess)="copySuccess()"><img src="assets/icons/link.svg" alt=""/>Copy Link</button>
         </div>
       </div>
