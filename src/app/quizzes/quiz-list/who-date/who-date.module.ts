@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { WhoDateComponent } from './who-date.component';
+import { ClipboardModule } from 'ngx-clipboard';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { WhoDateComponent } from './who-date.component';
   imports: [
     ReactiveFormsModule,
     CommonModule,
+    ClipboardModule,
     RouterModule.forChild([{path: '', component: WhoDateComponent}])
   ]
 })

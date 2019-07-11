@@ -1,29 +1,40 @@
 <div class="white-block">
-    <span class="label">quiz</span>
-    <h2>Who should you date?</h2>
-    <p>The cutie on the metro? Etc.</p>
-    <article>
-      <form [formGroup]="redFlagsForm">
-        <div class="form-field" *ngFor="let flag of flags; let index=index;">
-          <input type="checkbox" id="checkbox-{{index}}" formControlName="{{flag}}" (mousedown)="$event.preventDefault()"/>
-          <span></span><label for="checkbox-{{index}}">{{flag}}</label>
+  <span class="label">quiz</span>
+  <h2>Who should you date?</h2>
+  <p>The cutie on the metro? Etc.</p>
+  <article>
+
+    <form [formGroup]="whoDateForm" [class.disabled]="whoDateForm.disabled">
+      <div class="form-field" *ngFor="let question of questions; let indexa=index;" formArrayName="{{question.question}}">
+        <h3>{{question.question}}</h3>
+        <div class="answers">
+          <input type="button" (click)="select(question.question, answer.result)"
+            *ngFor="let answer of question.answers; let indexb=index"
+            [class.not-selected]="whoDateForm.get(question.question).value && whoDateForm.get(question.question).value !== answer.result"
+            value="{{answer.option}}" (mousedown)="$event.preventDefault()"/>
         </div>
-        <button (click)="submit()">Show me my results!</button>
-      </form>
-      <div *ngIf="results" class="results">
-        <div class="flex">
-          <div class="graph"><div class='bar'></div></div>
-          <div>
-            <h3>You found 0/x?</h3>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloremque odit animi nulla numquam explicabo quis sapient
-          </div>
-        </div>
-        <div class="sharing">
-            share to facebook
-            share to twitter
-            copy link
-          </div>
       </div>
-    </article>
-  </div>
-  
+
+      <button (click)="submit()" [disabled]="!whoDateForm.valid">Show me my results!</button>
+    </form>
+
+    <div *ngIf="winner" class="results">
+      <div class="flex">
+          <h3>You got {{winner}}</h3>
+          <p *ngIf="winner === 'Metro Boy'"> metro boy is cool</p>
+          <p *ngIf="winner === 'Elevator Boy'"> elevator boy is cool</p>
+          <p *ngIf="winner === 'Breakroom Boy'"> breakroom boy is cool</p>
+          <p *ngIf="winner === 'Instagram Boy'"> instagram boy is cool</p>
+          <div class="redo">Want to try again?<button aria-label="Reset" (click)="reset()"><img src="assets/icons/redo.svg" alt=""/></button></div>
+      </div>
+      <div class="sharing">
+        <button class="fb share-button" (click)="share()" aria-label="Share to Facebook"><img src="assets/social-media/facebook.png" alt=""/>Share</button>
+        <button class="twitter share-button" (click)="tweet()"><img src="assets/social-media/twitter_white.png" alt=""/>Tweet</button>
+        <div class="link-sharing">
+          <span [class.show]="copied">copy successful</span>
+          <button ngxClipboard [cbContent]="href" class="share-button" (cbOnSuccess)="copySuccess()"><img src="assets/icons/link.svg" alt=""/>Copy Link</button>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>

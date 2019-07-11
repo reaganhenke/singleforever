@@ -1,38 +1,5 @@
 @import "../../../variables";
 
-.white-block {
-  position: relative;
-}
-
-h2 {
-  margin: 0;
-  font-size: 2.25rem;
-}
-
-.label {
-  position: absolute;
-  right: 0.5rem;
-  top: -1.5rem;
-  width: $fixed-l;
-  height: $fixed-l;
-  color: $white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: $salmon;
-  letter-spacing: 0.06rem;
-  font-weight: 600;
-  font-size: 1.2rem;
-  font-family: $shrikhand;
-  transform: rotate(10deg);
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-}
-
 .form-field {
   display: flex;
   align-items: center;
@@ -105,17 +72,6 @@ form {
   }
 }
 
-.results {
-  border: solid $salmon;
-  border-width: 2rem 1rem 0.5rem;
-  display: flex;
-  flex-direction: column; 
-}
-
-.results>div {
-  display: flex;
-}
-
 .graph {
   position: relative;
   width: 40px;
@@ -140,97 +96,4 @@ form {
   width: 100%;
   background-color: $salmon;
   transition: 1s height;
-}
-
-.redo {
-  button {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-  }
-
-  img {
-    height: 24px;
-  }
-}
-
-.share-button {
-  margin: 0.5rem;
-  padding: 0.5rem;
-  font-size: .875rem;
-  background-color: #3f4165;
-  color: #fff;
-  border-radius: 3px;
-  border: 0;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.2s;
-  white-space: nowrap;
-  cursor: pointer;
-  &:hover, &:focus {
-    background-color: $navy;
-  }
-  img {
-    height: 14px;
-    margin-right: 5px;
-  }
-}
-
-.fb {
-  background-color: #3b5998;
-  &:hover, &:focus {
-    background-color: #1e2e4f;
-  }
-}
-
-.twitter {
-  background-color: #55acee;
-  &:hover, &:focus {
-    background-color: #147bc9;
-  }
-}
-
-.link-sharing {
-  position: relative;
-}
-
-.link-sharing span {
-  opacity: 0;
-  transition: opacity 0.5s;
-  background-color: $navy;
-  color: $white;
-  font-size: 0.75rem;
-  border-radius: 3px;
-  padding: 0.25rem;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 0;
-  right: 0;
-  top: -1.5rem;
-  text-align: center;
-  pointer-events: none;
-  font-family: system-ui;
-  white-space: nowrap;
-
-
-  &::after {
-    content: "";
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid $navy;
-    position: absolute;
-    bottom: -5px;
-    left: calc( 50% - 10px);
-
-  }
-
-  &.show {
-    opacity: 1;
-  }
 }

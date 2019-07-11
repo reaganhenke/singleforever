@@ -11,3 +11,63 @@ a {
     color: $link-hover;
   }
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.white-block {
+  position: relative;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.25rem;
+}
+
+.label {
+  position: absolute;
+  right: 0.5rem;
+  top: -1.5rem;
+  width: $fixed-l;
+  height: $fixed-l;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: $salmon;
+  letter-spacing: 0.06rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  font-family: $shrikhand;
+  transform: rotate(10deg);
+}
+
+
+.results {
+  border: solid $salmon;
+  border-width: 2rem 1rem 0.5rem;
+  display: flex;
+  flex-direction: column; 
+}
+
+.results>div {
+  display: flex;
+}
+
+.redo {
+  button {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  img {
+    height: 24px;
+  }
+}

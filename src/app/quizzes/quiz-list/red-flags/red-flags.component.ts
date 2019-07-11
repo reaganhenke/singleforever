@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, FormArray, FormControl } from '@angular/forms';
+import { Component } from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 import { flagList } from './models/red-flags.model';
 import { UIParams, FacebookService, UIResponse } from 'ngx-facebook';
 
 @Component({
   selector: 'app-red-flags',
   templateUrl: './red-flags.component.html',
-  styleUrls: ['./red-flags.component.scss']
+  styleUrls: ['./red-flags.component.scss', '../../../shared/sharing.scss', '../../quizzes.component.scss']
 })
-export class RedFlagsComponent implements OnInit {
+export class RedFlagsComponent {
 
   redFlagsForm: FormGroup;
   results: number;
@@ -18,10 +18,8 @@ export class RedFlagsComponent implements OnInit {
   copied = false;
   heightPercent: string;
 
-  constructor(private formBuilder: FormBuilder, private fb: FacebookService) { }
-
-  ngOnInit() {
-    this.redFlagsForm = this.formBuilder.group({});
+  constructor(private fb: FacebookService) {
+    this.redFlagsForm = new FormGroup({});
     for (const flag of flagList) {
       this.redFlagsForm.addControl(flag, new FormControl());
     }
@@ -42,12 +40,11 @@ export class RedFlagsComponent implements OnInit {
     this.finished = true;
     this.redFlagsForm.disable();
     setTimeout(() => this.heightPercent = this.percent, 10);
-
   }
 
   reset() {
-    this.redFlagsForm.reset(); // check that this works
     this.finished = false;
+    this.redFlagsForm.reset();
     this.redFlagsForm.enable();
   }
 
@@ -72,5 +69,4 @@ export class RedFlagsComponent implements OnInit {
     this.copied = true;
     setTimeout(() => this.copied = false, 1000);
   }
-
 }
