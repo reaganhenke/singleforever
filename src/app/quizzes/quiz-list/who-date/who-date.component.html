@@ -15,7 +15,7 @@
         </div>
       </div>
 
-      <button (click)="submit()" [disabled]="!whoDateForm.valid">Show me my results!</button>
+      <button (click)="submit()" [disabled]="!whoDateForm.valid" class="submit-button">Show me my results!</button>
     </form>
 
     <div *ngIf="winner" class="results">

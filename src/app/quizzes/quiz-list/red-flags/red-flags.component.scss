@@ -56,22 +56,6 @@
   }
 }
 
-.submit-button {
-  margin: 1rem 0;
-  padding: 1rem;
-  background-color: $salmon;
-  font-family: $crimson;
-  font-size: 1.25rem;
-  border: none;
-  outline: none;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  &:hover, &:focus {
-    background-color: #c15148;
-  }
-}
-
 .graph {
   position: relative;
   width: 40px;
