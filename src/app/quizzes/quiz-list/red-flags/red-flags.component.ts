@@ -35,7 +35,6 @@ export class RedFlagsComponent {
   }
 
   submit() {
-    console.log(this.redFlagsForm.getRawValue());
     this.results = Object.values(this.redFlagsForm.getRawValue()).filter(val => val).length;
     this.finished = true;
     this.redFlagsForm.disable();
@@ -48,15 +47,13 @@ export class RedFlagsComponent {
     this.redFlagsForm.enable();
   }
 
-  share(url: string) {
+  share() {
     const params: UIParams = {
       href: 'https://github.com/zyra/ngx-facebook',
       method: 'share',
       quote: 'I won!'
     };
-    this.fb.ui(params)
-      .then((res: UIResponse) => console.log(res))
-      .catch((e: any) => console.error(e));
+    this.fb.ui(params);
   }
 
   tweet() {

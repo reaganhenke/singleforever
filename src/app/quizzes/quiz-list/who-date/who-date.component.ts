@@ -64,9 +64,7 @@ export class WhoDateComponent {
       method: 'share',
       quote: 'I won!'
     };
-    this.fb.ui(params)
-      .then((res: UIResponse) => console.log(res))
-      .catch((e: any) => console.error(e));
+    this.fb.ui(params);
   }
 
   tweet() {
