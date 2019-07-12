@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { filter } from 'rxjs/operators';
+import { texts } from './models/texts.model';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   togglingSearch = false;
   currUrl: string;
   navListener: Subscription;
+  text: string;
+  time: string;
 
   searchForm = new FormGroup({
     searchInput: new FormControl({value: '', disabled: true})
@@ -28,6 +31,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
         const currentUrl = navEnd.urlAfterRedirects.split('/')[1];
         this.currUrl = currentUrl ? currentUrl : 'home';
       });
+    this.text = texts[Math.floor(Math.random() * texts.length)];
+    const today = new Date();
+    let minutes = today.getMinutes().toString();
+    minutes = (minutes.length) > 1 ? minutes : '0' + minutes;
+    this.time = (today.getHours() % 12) + ':' + minutes + (today.getHours() < 12 ? 'am' : 'pm');
   }
 
   toggleSearch() {
