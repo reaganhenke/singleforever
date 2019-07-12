@@ -30,7 +30,11 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe((navEnd: NavigationEnd) => {
         const currentUrl = navEnd.urlAfterRedirects.split('/')[1];
         this.currUrl = currentUrl ? currentUrl : 'home';
+        this.updateText();
       });
+  }
+
+  updateText() {
     this.text = texts[Math.floor(Math.random() * texts.length)];
     const today = new Date();
     let minutes = today.getMinutes().toString();
