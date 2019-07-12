@@ -40,6 +40,20 @@ describe('HeaderComponent', () => {
     expect(component.currUrl).toEqual('home');
   });
 
+  describe('updateText', () => {
+    it('should set current time', () => {
+      global.Date.now = jest.fn(() => 1391234461000);
+      component.updateText();
+      expect(component.time).toEqual('1:01am');
+    });
+
+    it('should set current time and populate extra zeros', () => {
+      global.Date.now = jest.fn(() => 1391237401000);
+      component.updateText();
+      expect(component.time).toEqual('1:50am');
+    });
+  });
+
   describe('toggle search', () => {
     it('shouldn\'t do anything if search is toggling', () => {
       component.togglingSearch = true;

@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   updateText() {
     this.text = texts[Math.floor(Math.random() * texts.length)];
-    const today = new Date();
+    const today = new Date(Date.now());
     let minutes = today.getMinutes().toString();
     minutes = (minutes.length) > 1 ? minutes : '0' + minutes;
     this.time = (today.getHours() % 12) + ':' + minutes + (today.getHours() < 12 ? 'am' : 'pm');

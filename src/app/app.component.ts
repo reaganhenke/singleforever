@@ -13,12 +13,12 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     const params = {
-      appId            : '707415399687104',
-      xfbml            : true,
-      version          : 'v3.3'
+      appId: '707415399687104',
+      xfbml: true,
+      version: 'v3.3'
     };
 
     this.fb.init(params);
     // https://developers.facebook.com/apps/707415399687104/settings/basic/
-  };
+  }
 }
