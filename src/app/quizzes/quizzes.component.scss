@@ -1,15 +1,10 @@
 @import "../variables";
 
-.featured-post {
-  cursor: pointer;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-  &:hover {
-    color: $link-hover;
-  }
+.banner {
+  background-color: #88d1ce;
+  max-height: 365px;
+  object-fit: cover;
+  object-position: 0 0;
 }
 
 form {

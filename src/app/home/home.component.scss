@@ -9,9 +9,11 @@ a {
   height: $fixed-xl;
   width: $fixed-xl;
   border: 12px solid $white;
-  background-size: auto 100%;
+  background-size: auto 89%;
   background-position-x: 40%;
   color: #000;
+  background-repeat: no-repeat;
+  background-color: #a1d4d2;
   span {
     position: absolute;
     margin-left: -24px;
@@ -22,21 +24,24 @@ a {
     font-family: $shrikhand;
   }
   &:nth-child(1) {
-    background-image: url("../../assets/placeholders/placeholder1.jpg");
+    background-position: 48% 34%;
+    background-image: url("../../assets/quizzes.svg");
   }
   &:nth-child(2) {
-    background-image: url("../../assets/placeholders/placeholder2.jpg");
+    background-position: 40% 77%;
+    background-image: url("../../assets/dating.svg");
   }
   &:nth-child(3) {
-    background-image: url("../../assets/placeholders/placeholder3.jpg");
+    background-position: 65%;
+    background-image: url("../../assets/lifestyle.svg");
   }
 }
 
 .info {
   display: flex;
   img {
-    height: $fixed-l;
-    margin-right: $medium;
+    height: 49px;
+    margin-right: 1rem;
   }
 }
 
@@ -48,9 +53,10 @@ a {
 
 .tag-group span {
   background-color: $salmon;
-  border-radius: $x-small;
-  padding: $x-small $small;
-  margin: $small $small 0 0;
+  border-radius: 3px;
+  padding: 0.2rem 0.3rem;
+  margin: 0.25rem 0.5rem 0 0;
+  font-size: 0.9rem;
 }
 
 @media only screen and (max-width : 800px) {
