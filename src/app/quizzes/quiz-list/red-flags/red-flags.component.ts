@@ -43,6 +43,7 @@ export class RedFlagsComponent {
 
   reset() {
     this.finished = false;
+    this.heightPercent = '0%';
     this.redFlagsForm.reset();
     this.redFlagsForm.enable();
   }

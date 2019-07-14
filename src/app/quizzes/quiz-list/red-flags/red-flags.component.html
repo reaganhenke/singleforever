@@ -1,8 +1,10 @@
 <div class="white-block">
   <span class="label">quiz</span>
   <img class="banner" src="assets/redflags.svg" alt="" />
-  <h2>How many red flags can you find?</h2>
-  <p>You just started dating someone new. Which of these behaviors are red flags? Select every one that you think might be a problem.</p>
+  <h2>Can You Identify the Red Flags?</h2>
+  <p>You just started dating someone new. Which of these behaviors are totally normal,
+    and which are red flags? Remember, he’s like, super cute. Can you catch all the red flags,
+    even with your rose-colored glasses on? Check off everything you think might be a problem.</p>
   <article>
     <form [formGroup]="redFlagsForm">
       <div class="form-field" *ngFor="let flag of flags; let index=index;" [class.disabled]="finished">
@@ -13,10 +15,23 @@
     </form>
     <div *ngIf="finished" class="results">
       <div class="flex">
-        <div class="graph"><span>{{percent}}</span><div class="bar" [style.height] = "heightPercent"></div></div>
+        <div class="graph"><div class="bar" [style.height] = "heightPercent"></div></div>
         <div>
           <h3>You caught {{results}}/{{total}}!</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, doloremque odit animi nulla numquam explicabo quis sapient</p>
+          <p *ngIf="(results/total) < 0.3">
+            Terrible. You didn’t catch many of those red flags. Honestly, you might end up murdered. 
+          </p>
+          <p *ngIf="(results/total) >= 0.3 && (results/total) < 0.6">
+            Ok. You caught a few! Just enough that it’ll really sting when people tell you, “I told you so”,
+            but not enough to dump him and save yourself.
+          </p>
+          <p *ngIf="(results/total) >= 0.6 && (results/total) < 0.7">
+            Good! You probably would’ve gotten out early enough not to get hurt. Well done.
+          </p>
+          <p *ngIf="(results/total) >= 0.7 && (results/total) <= 1">
+            Awesome! Wow! You probably wouldn’t have even fallen for him in the first place.
+            Can you maybe teach me how to do that?
+          </p>
           <div class="redo">Want to try again?<button aria-label="Reset" (click)="reset()"><img src="assets/icons/redo.svg" alt=""/></button></div>
         </div>
       </div>

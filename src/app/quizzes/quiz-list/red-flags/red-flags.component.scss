@@ -5,6 +5,8 @@
   align-items: center;
   position: relative;
   margin: 0.5rem 0;
+  border: 2px solid transparent;
+
 
   input[type="checkbox"] {
     position: absolute;
@@ -47,6 +49,11 @@
   }
 }
 
+.form-field:hover, .form-field:focus {
+  border: 2px solid #ccc8c8;
+  border-radius: 3px;
+}
+
 .form-field.disabled {
   color: $gray;
   pointer-events: none;
@@ -80,4 +87,5 @@
   width: 100%;
   background-color: $salmon;
   transition: 1s height;
+  min-height: 3px !important;
 }
