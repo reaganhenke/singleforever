@@ -15,14 +15,16 @@
     border-radius: 5px;
     font-size: 2rem;
     transition: font-size 0.2s;
+    padding: 1rem;
+    white-space: normal;
     cursor: pointer;
     &:hover, &:focus {
       font-size: 2.2rem;
     }
     &.not-selected {
       background-color: #487E8E;
-      &:hover {
-        background-color: $navy;
+      &:hover, &:focus {
+        background-color: #294046;
       }
     }
   }
@@ -33,14 +35,27 @@
   &:hover, &:focus {
     font-size: 2rem;
   }
-  &.not-selected:hover {
+  &.not-selected:hover, &.not-selected:focus {
     background-color: #487E8E;
   }
 }
 
-.flex {
+.results h3 {
+  font-size: 1.5rem;
+  span {
+  font-size: 1.2em;
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-col {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .submit-button {
@@ -49,4 +64,10 @@
 
 .results {
   margin-top: 1rem;
+  padding: 0rem 1rem;
+}
+
+.boy {
+  height: 300px;
+  margin-right: 2rem;
 }

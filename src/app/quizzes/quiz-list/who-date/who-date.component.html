@@ -1,8 +1,9 @@
 <div class="white-block">
   <span class="label">quiz</span>
   <img class="banner" src="assets/whodate_long.svg" alt="" />
-  <h2>Who should you date?</h2>
-  <p>The cutie on the metro? Etc.</p>
+  <h2>Who's Your Dream Date?</h2>
+  <p>Elevator Boy&trade;. Metro Boy&trade;. Breakroom Boy&trade;. Instagram Boy&trade;. The world is full of eligible
+    bachelors, but who's the right one for you? This quiz will reveal who you're meant to be with! </p>
   <article>
 
     <form [formGroup]="whoDateForm" [class.disabled]="whoDateForm.disabled">
@@ -20,20 +21,54 @@
     </form>
 
     <div *ngIf="winner" class="results">
-      <div class="flex">
-          <h3>You got {{winner}}</h3>
-          <p *ngIf="winner === 'Metro Boy'"> metro boy is cool</p>
-          <p *ngIf="winner === 'Elevator Boy'"> elevator boy is cool</p>
-          <p *ngIf="winner === 'Breakroom Boy'"> breakroom boy is cool</p>
-          <p *ngIf="winner === 'Instagram Boy'"> instagram boy is cool</p>
-          <div class="redo">Want to try again?<button aria-label="Reset" (click)="reset()"><img src="assets/icons/redo.svg" alt=""/></button></div>
-      </div>
-      <div class="sharing">
-        <button class="fb share-button" (click)="share()" aria-label="Share to Facebook"><img src="assets/social-media/facebook.png" alt=""/>Share</button>
-        <button class="twitter share-button" (click)="tweet()"><img src="assets/social-media/twitter_white.png" alt=""/>Tweet</button>
-        <div class="link-sharing">
-          <span [class.show]="copied">copy successful</span>
-          <button ngxClipboard [cbContent]="href" class="share-button" (cbOnSuccess)="copySuccess()"><img src="assets/icons/link.svg" alt=""/>Copy Link</button>
+      <h3>You got <span>{{winner}}&trade;</span></h3>
+      <div class="flex-row">
+        
+        <div *ngIf="winner === 'Metro Boy'"> 
+          <img class="boy" src="assets/boys/metro.svg" alt="" />
+        </div>
+        <div *ngIf="winner === 'Elevator Boy'">
+          <img class="boy" src="assets/boys/elevator.svg" alt="" />
+        </div>
+        <div *ngIf="winner === 'Breakroom Boy'">
+          <img class="boy" src="assets/boys/breakroom.svg" alt="" />
+        </div>
+        <div *ngIf="winner === 'Instagram Boy'">
+          <img class="boy" src="assets/boys/instagram.svg" alt="" />
+        </div>
+
+        <div class="flex-col">
+          <div> 
+            <div *ngIf="winner === 'Metro Boy'"> 
+              <p>You got Metro Boy&trade;! You had the most romantic meet
+                cute with him on the metro. You work up the nerve to
+                ask him out, but he’s already dating someone else. </p>
+            </div>
+            <div *ngIf="winner === 'Elevator Boy'">
+              <p>You got Elevator Boy&trade;! Every time you cross paths,
+                you both blush and smile at each other. You promise yourself,
+                the next time you see him, you’ll ask him out. He moves out of
+                your building and you never see him again</p>
+            </div>
+            <div *ngIf="winner === 'Breakroom Boy'">
+              <p>You got Breakroom Boy&trade;! Sweet and comfortable, he knows 
+                just how to make you laugh. There’s no chemistry between you, and never will be.</p>
+            </div>
+            <div *ngIf="winner === 'Instagram Boy'">
+              <p>You got Instagram Boy&trade;! You’ve met him once or twice,
+                but he doesn’t remember your name. You’ll always watch
+                his stories and like his posts, but he will literally never notice you.</p>
+            </div>
+            <div class="redo">Want to try again?<button aria-label="Reset" (click)="reset()"><img src="assets/icons/redo.svg" alt=""/></button></div>
+          </div>
+          <div class="sharing">
+            <button class="fb share-button" (click)="share()" aria-label="Share to Facebook"><img src="assets/social-media/facebook.png" alt=""/>Share</button>
+            <button class="twitter share-button" (click)="tweet()"><img src="assets/social-media/twitter_white.png" alt=""/>Tweet</button>
+            <div class="link-sharing">
+              <span [class.show]="copied">copy successful</span>
+              <button ngxClipboard [cbContent]="href" class="share-button" (cbOnSuccess)="copySuccess()"><img src="assets/icons/link.svg" alt=""/>Copy Link</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

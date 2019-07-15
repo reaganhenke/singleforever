@@ -40,7 +40,6 @@ h2 {
   transform: rotate(10deg);
 }
 
-
 .results {
   border: solid $salmon;
   border-width: 2rem 1rem 0.5rem;
@@ -71,6 +70,10 @@ h2 {
   }
 }
 
+.sharing {
+  display: flex;
+}
+
 .submit-button {
   margin: 1rem 0;
   padding: 1rem;
@@ -79,10 +82,14 @@ h2 {
   font-size: 1.25rem;
   border: none;
   outline: none;
-  color: white;
+  color: $white;
   cursor: pointer;
   transition: background-color 0.2s;
   &:hover, &:focus {
     background-color: #c15148;
+  }
+  &:disabled {
+    background-color: #efa9a3 !important;
+    pointer-events: none;
   }
 }

@@ -14,7 +14,7 @@ export class WhoDateComponent {
   winner: string;
   questions = dateQuestions;
   copied = false;
-  href = 'asdfkhadfkjhdsflkajhdf.com';
+  href = 'placeholder.com';
 
   constructor(private fb: FacebookService) {
     this.whoDateForm = new FormGroup({});
@@ -24,7 +24,7 @@ export class WhoDateComponent {
   }
 
   select(i: string, value: string) {
-    if (!this.winner) {
+    if (!this.winner && !!value) {
       this.whoDateForm.get(i).setValue(value);
     }
   }
@@ -60,15 +60,15 @@ export class WhoDateComponent {
 
   share() {
     const params: UIParams = {
-      href: 'https://github.com/zyra/ngx-facebook',
+      href: this.href,
       method: 'share',
-      quote: 'I won!'
+      quote: `I got ${this.winner}! See who your dream date is!`
     };
     this.fb.ui(params);
   }
 
   tweet() {
-    const text = 'I won the game!';
+    const text = `I got ${this.winner}! See who your dream date is! ${this.href}`;
     const href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(this.href);
     window.open(href, '', 'menubar=no, toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
   }
