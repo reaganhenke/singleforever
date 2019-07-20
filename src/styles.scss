@@ -65,6 +65,7 @@ main {
 
 .post-preview {
   width: 70%;
+  box-sizing: border-box;
 
   padding: $medium;
   // min-height: $fixed-xl;

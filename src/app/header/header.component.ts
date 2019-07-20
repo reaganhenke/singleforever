@@ -31,6 +31,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
         const currentUrl = navEnd.urlAfterRedirects.split('/')[1];
         this.currUrl = currentUrl ? currentUrl : 'home';
         this.updateText();
+        this.searchForm.get('searchInput').disable();
+        this.showSearch = false;
+        this.togglingSearch = false;
       });
   }
 
