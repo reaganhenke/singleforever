@@ -4,7 +4,7 @@ header {
   padding: $medium 0;
 }
 
-.banner {
+.header-banner {
   display: flex;
   min-height: $fixed-xl;
   max-width: $fixed-maxwidth;
@@ -163,7 +163,7 @@ section {
 }
 
 @media only screen and (max-width: $screen-tablet) {
-  .banner {
+  .header-banner {
     min-height: 0;
     padding: 0 1rem 1rem;
   }

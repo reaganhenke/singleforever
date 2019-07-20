@@ -1,3 +1,25 @@
-<p>
-  moveon works!
-</p>
+<div class="white-block">
+  <img class="banner" src="assets/moveon/heartbroken_long.svg" alt="" />
+  <h2>How to Get Over Your Ex</h2>
+  <p>
+    So you got dumped. Listen, breakups are hard. I know, I’ve been there.
+    Your heart hurts, you might’ve left a drunk voicemail or two or three.
+    But instead of spending night after night crying over him, I’m going to
+    tell you exactly how to move on. Here’s how to get over your ex.
+  </p>
+  <div class="inner-block">
+    <span><button *ngIf="idx > 0" (click)="move(-1)"  class="back" (mousedown)="$event.preventDefault()"></button></span>
+    <div class="content">
+    
+      <span *ngFor="let step of steps;index as i" class="wrapper" [class.active]="idx === i">
+        <img [src]="step.imgUrl" alt=""/>
+        <div class="text">
+          <h3>{{step.title}}</h3>
+          <p>{{step.content}}</p>
+        </div>
+      </span>
+
+  </div>
+    <span><button *ngIf="idx < steps.length - 1" (click)="move(1)" class="forward" (mousedown)="$event.preventDefault()"></button></span>
+  </div>
+</div>
