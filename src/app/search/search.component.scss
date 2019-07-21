@@ -1,0 +1,28 @@
+@import "../variables";
+
+.searched {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+#searched-input {
+  font-size: 2rem;
+  width: 20rem;
+  border: none;
+  border-bottom: 3px solid #000;
+  margin-right: 0.5rem;
+  color: black;
+  margin-bottom: 1rem;
+}
+
+button {
+  height: 24px;
+  width: 24px;
+  background-image: url("../../assets/icons/closeblack.svg");
+  background-color: transparent;
+  border: none;
+  background-repeat: no-repeat;
+  padding: 0;
+  cursor: pointer;
+}

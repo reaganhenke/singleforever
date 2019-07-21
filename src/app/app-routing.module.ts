@@ -24,6 +24,10 @@ const routes: Routes = [
     loadChildren: () => import('./about/about.module').then(mod => mod.AboutModule)
   },
   {
+    path: 'search',
+    loadChildren: () => import('./search/search.module').then(mod => mod.SearchModule)
+  },
+  {
     path: '**',
     redirectTo: '',
   }];

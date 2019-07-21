@@ -46,6 +46,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   toggleSearch() {
+    if (this.showSearch && this.searchForm.get('searchInput').value) {
+      this.router.navigate(['/search'], { queryParams: { q: this.searchForm.get('searchInput').value}});
+      this.searchForm.get('searchInput').reset('');
+    }
     if (!this.togglingSearch) {
       if (this.showSearch) {
         this.showSearch = false;
@@ -64,6 +68,10 @@ export class HeaderComponent implements OnInit, OnDestroy {
         }, 500);
       }
     }
+  }
+
+  get notSearch() {
+    return this.currUrl ? !this.currUrl.startsWith('search') : false;
   }
 
   ngOnDestroy() {

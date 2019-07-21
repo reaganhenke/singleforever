@@ -22,16 +22,16 @@
     <div class="container">
       <div class="home">
         <a routerLink="/" aria-label="home"></a>
-        <div class="current" [class.no-show]="!searchForm.get('searchInput').disabled">
+        <div class="current" *ngIf="notSearch" [class.no-show]="!searchForm.get('searchInput').disabled">
           {{currUrl}}
         </div>
       </div>
-      <div class="search" [formGroup]="searchForm">
+      <form class="search" [formGroup]="searchForm">
         <input type="text" *ngIf="!searchForm.get('searchInput').disabled"
-          [class.show]="showSearch" formControlName="searchInput" id="searchInput"/>
+          [class.show]="showSearch" formControlName="searchInput" id="searchInput" />
         <button (click)="toggleSearch()" (mousedown)="$event.preventDefault()" aria-label="toggle search input"
           [attr.aria-expanded]="!searchForm.get('searchInput').disabled"></button>
-      </div>
+      </form>
     </div>
   </section>
 </header>

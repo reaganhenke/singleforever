@@ -1,0 +1,20 @@
+<div class="white-block">
+  <form class="searched" [formGroup]="searchedForm" (submit)="closeSearch()">
+    <input
+      type="text"
+      formControlName="searchInput"
+      id="searched-input"
+      aria-label="searched input"
+    />
+    <button
+      (mousedown)="$event.preventDefault()"
+      aria-label="close search"
+    ></button>
+  </form>
+  <p>
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dicta
+    temporibus, provident consequuntur, saepe quia dolorum obcaecati praesentium
+    ea alias accusamus ullam totam? Officiis, ab? Impedit iste nostrum deserunt
+    accusantium?
+  </p>
+</div>
