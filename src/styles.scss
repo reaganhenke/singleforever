@@ -44,7 +44,7 @@ main {
     font-size: 1.25;
     color: #000;
     text-decoration: none;
-    &:hover {
+    &:hover, &:focus {
       color: $link-hover;
     }
   }
@@ -53,11 +53,9 @@ main {
 .banner-img {
   width: 30%;
   object-fit: cover;
-  // max-height: 350px;
 }
 
 .banner {
-  // background-color: #88d1ce;
   max-height: 365px;
   object-fit: cover;
   object-position: 0 0;
@@ -66,9 +64,7 @@ main {
 .post-preview {
   width: 70%;
   box-sizing: border-box;
-
   padding: $medium;
-  // min-height: $fixed-xl;
   overflow: scroll;
   h2 {
     font-family: $arbutus;
@@ -86,7 +82,6 @@ main {
   box-sizing: border-box;
 }
 
-
 @media only screen and (max-width : 600px) {
   .featured-post {
     flex-direction: column;
@@ -103,5 +98,3 @@ main {
     width: 100%;
   }
 }
-
-
