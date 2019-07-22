@@ -11,6 +11,9 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 import { A11yModule } from '@angular/cdk/a11y';
 import { FacebookModule } from 'ngx-facebook';
 import { ClipboardModule } from 'ngx-clipboard';
+import { FacebookModalComponent } from './modals/facebook-modal/facebook-modal.component';
+import { ModalService } from './services/modal.service';
+import { DomService } from './services/dom.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,8 @@ import { ClipboardModule } from 'ngx-clipboard';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    MobileMenuComponent
+    MobileMenuComponent,
+    FacebookModalComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +32,13 @@ import { ClipboardModule } from 'ngx-clipboard';
     ClipboardModule,
     FacebookModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    ModalService,
+    DomService
+  ],
+  entryComponents: [
+    FacebookModalComponent
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

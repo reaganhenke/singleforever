@@ -1,0 +1,26 @@
+@import "../variables";
+
+.modal {
+  background-color: $white;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.circle {
+  position: absolute;
+  background-color: #e7685d;
+  height: 250px;
+  width: 250px;
+  left: -75px;
+  top: -75px;
+  border-radius: 50%;
+}
+
+@media only screen and (max-width: $screen-mobile) {
+  .circle {
+    display: none;
+  }
+}

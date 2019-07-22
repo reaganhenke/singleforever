@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ModalService } from 'app/services/modal.service';
+import { FacebookModalComponent } from 'app/modals/facebook-modal/facebook-modal.component';
 
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.scss']
 })
-export class FooterComponent implements OnInit {
+export class FooterComponent {
 
-  constructor() { }
+  constructor(private modalService: ModalService) { }
 
-  ngOnInit() {
+  openFacebookModal() {
+    this.modalService.init(FacebookModalComponent, 'facebook-link');
   }
-
 }

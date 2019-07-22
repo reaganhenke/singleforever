@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FacebookService } from 'ngx-facebook';
+import { ModalService } from './services/modal.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,7 @@ import { FacebookService } from 'ngx-facebook';
 export class AppComponent implements OnInit {
   title = 'single-forever';
 
-  constructor(private fb: FacebookService) {}
+  constructor(private fb: FacebookService, private modalService: ModalService) {}
 
   ngOnInit() {
     const params = {
@@ -20,5 +21,9 @@ export class AppComponent implements OnInit {
 
     this.fb.init(params);
     // https://developers.facebook.com/apps/707415399687104/settings/basic/
+  }
+
+  removeModal() {
+    this.modalService.destroy();
   }
 }

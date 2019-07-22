@@ -31,6 +31,7 @@ nav {
 
 .external-links a {
   display: inline-flex;
+  cursor: pointer;
   img {
     height: $fixed-m;
     width: $fixed-m;

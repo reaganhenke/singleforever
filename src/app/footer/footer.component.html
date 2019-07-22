@@ -7,7 +7,10 @@
       <a routerLink="about" routerLinkActive="active">about</a>
     </nav>
     <nav class="external-links">
-      <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/"><img src="assets/social-media/facebook.png" alt="Facebook"/></a>
+      <span tabindex="-1" id="facebook-link"></span>
+      <a (click)="openFacebookModal()" (keyup.enter)="openFacebookModal()" tabindex="0">
+        <img src="assets/social-media/facebook.png" alt="Facebook"/>
+      </a>
       <a target="_blank" rel="noopener noreferrer" href="https://github.com/reaganhenke"><img src="assets/social-media/github.png" alt="Github"/></a>
       <a target="_blank" rel="noopener noreferrer" href="https://twitter.com/reaganhenke"><img src="assets/social-media/twitter.png" alt="Twitter"/></a>
       <a target="_blank" rel="noopener noreferrer" href="https://codepen.io/reaganhenke/"><img src="assets/social-media/codepen.png" alt="Codepen"/></a>
