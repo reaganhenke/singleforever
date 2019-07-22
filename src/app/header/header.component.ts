@@ -77,4 +77,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.navListener.unsubscribe();
   }
+
+  skipNav() {
+    document.getElementById('first-link').scrollIntoView();
+    document.getElementById('first-link').focus();
+  }
 }

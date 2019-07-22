@@ -1,5 +1,18 @@
 @import "../variables";
 
+.skip-nav {
+  position: absolute;
+  left: 33%;
+  top: -10%;
+  background-color: transparent;
+  color: $gray;
+  text-decoration: underline;
+  border: 0;
+  &:focus {
+    top: auto;
+  }
+}
+
 header {
   padding: $medium 0;
 }

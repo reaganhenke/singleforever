@@ -26,6 +26,7 @@
           {{currUrl}}
         </div>
       </div>
+      <button (click)="skipNav()" class="skip-nav">Skip to Footer Navigation</button>
       <form class="search" [formGroup]="searchForm">
         <input type="text" *ngIf="!searchForm.get('searchInput').disabled"
           [class.show]="showSearch" formControlName="searchInput" id="searchInput" />
