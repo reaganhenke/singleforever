@@ -54,6 +54,12 @@ describe('HeaderComponent', () => {
       component.updateText();
       expect(component.time).toEqual('1:50am');
     });
+
+    it('should set time if pm', () => {
+      global.Date.now = jest.fn(() => 1555091400000);
+      component.updateText();
+      expect(component.time).toEqual('1:50pm');
+    });
   });
 
   describe('toggle search', () => {
