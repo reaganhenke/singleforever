@@ -3,6 +3,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { Component } from '@angular/core';
 import { FacebookService } from 'ngx-facebook';
+import { ModalService } from './services/modal.service';
+import { DomService } from './services/dom.service';
 
 @Component({
   selector: 'app-header',
@@ -30,6 +32,7 @@ describe('AppComponent', () => {
   let app: AppComponent;
   let fixture: ComponentFixture<AppComponent>;
   let fb: FacebookService;
+  let modalService: ModalService;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -45,7 +48,10 @@ describe('AppComponent', () => {
       providers: [{
         provide: FacebookService,
         useValue: mockFacebookService
-      }]
+      },
+      ModalService,
+      DomService
+    ]
     }).compileComponents();
   }));
 
@@ -53,6 +59,7 @@ describe('AppComponent', () => {
     fixture = TestBed.createComponent(AppComponent);
     app = fixture.debugElement.componentInstance;
     fb = TestBed.get(FacebookService);
+    modalService = TestBed.get(ModalService);
     fixture.detectChanges();
   });
 
@@ -69,4 +76,9 @@ describe('AppComponent', () => {
     expect(fb.init).toHaveBeenCalled();
   });
 
+  it(`should remove modal service'`, () => {
+    const spy = spyOn(modalService, 'destroy');
+    app.removeModal();
+    expect(spy).toHaveBeenCalled();
+  });
 });

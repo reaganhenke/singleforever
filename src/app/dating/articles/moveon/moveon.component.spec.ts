@@ -22,4 +22,12 @@ describe('MoveonComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should move', () => {
+    component.idx = 1;
+    component.move(1);
+    expect(component.idx).toEqual(2);
+    component.move(-1);
+    expect(component.idx).toEqual(1);
+  });
 });
