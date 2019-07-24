@@ -18,10 +18,8 @@ export class ModalService {
     document.body.style.overflow = 'hidden';
     document.getElementById(this.modalElementId).className = 'show';
     document.getElementById(this.overlayElementId).className = 'show';
-    // setTimeout(() => document.getElementById(this.overlayElementId).focus(), 1000);
 
     this.escListener = fromEvent(document, 'keydown').subscribe((e: KeyboardEvent) => {
-      console.log('lIOGGING:');
       if (e.key === 'Escape') {
         this.destroy();
       }
