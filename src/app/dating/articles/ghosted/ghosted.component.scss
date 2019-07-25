@@ -1,7 +1,8 @@
 @import "../../../variables";
 
-.texts {
-  width: 100%;
+#texts {
+  width: 80%;
+  margin: 0 auto;
   border-radius: 1rem;
   border: 1px solid $gray;
   display: flex;
@@ -14,29 +15,39 @@
   font-size: 0.825rem;
 }
 
-.texts span {
+::ng-deep #texts span {
   border-radius: 12px;
   padding: 0.25rem 0.5rem;
   margin: 0.25rem 0;
   position: relative;
 }
 
-#her span {
+::ng-deep .right span {
   background-color: #147efb;
   color: white;
 }
 
-.him span {
+.left span {
   background-color: #d0d0d0;
 }
 
-#her {
+.right, .left {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+  width: 100%;
 }
 
-.him span:last-child::after {
+.left {
+  align-self: flex-start;
+  align-items: flex-start;
+}
+
+.right {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+.left span:last-child::after {
   content: "";
   position: absolute;
   left: 0;
@@ -47,7 +58,7 @@
   transform: rotate(14deg);
 }
 
-#her span:last-child::after {
+::ng-deep .right span:last-child::after{
   content: "";
   position: absolute;
   right: 0;
