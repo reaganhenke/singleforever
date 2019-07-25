@@ -1,3 +1,25 @@
-#test:focus {
-  outline: none;
+@import "../../variables";
+
+#header {
+  text-align: center;
+  margin-top: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+.close-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+button {
+  height: $fixed-m;
+  width: $fixed-m;
+  border: none;
+  cursor: pointer;
+}
+
+p {
+  padding: 0 1rem;
 }

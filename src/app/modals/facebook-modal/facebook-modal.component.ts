@@ -11,7 +11,7 @@ export class FacebookModalComponent implements OnInit {
   constructor(private modalService: ModalService) { }
 
   ngOnInit() {
-    document.getElementById('test').focus();
+    document.getElementById('header').focus();
   }
 
   public close() {

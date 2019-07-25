@@ -1,11 +1,14 @@
 <span class="circle"></span>
 <div class="modal">
-  <div id="test" tabindex="-1">
-      This is the sample modal
-    </div>
-    <div class="sample-close">
-      <button (click)="close()">
-        Close Modal
-      </button>
-    </div>
+  <div class="close-row">
+    <button (click)="close()" (mousedown)="$event.preventDefault()">
+      <img src="assets/icons/closeblack.svg" alt="close modal" />
+    </button>
   </div>
+  <h1 id="header" tabindex="-1">
+    Looking for my Facebook?
+  </h1>
+  <p>
+    Hey there. I’m not going to link you to my real Facebook. I’m not even sure why you clicked that. What were you looking for?
+  </p>
+</div>
