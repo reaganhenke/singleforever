@@ -2,6 +2,54 @@
   <img class="banner" src="assets/mealprep/mealfull.svg" alt="" />
   <h2>Mealprep</h2>
   <p>
-    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum dicta temporibus, provident consequuntur, saepe quia dolorum obcaecati praesentium ea alias accusamus ullam totam? Officiis, ab? Impedit iste nostrum deserunt accusantium?
+    Depression is funny, sometimes you can’t remember to eat and just
+    need to make sure you stay alive. Sometimes the only thing you have
+    energy to do is shove food in your mouth all day until you’ve put on
+    20 pounds. Some days you can’t get out of bed. Some days you can actually
+    be productive. So here are some of my favorite recipes; sort by how you feel today!
   </p>
+  <div class="wrapper">
+    <nav>
+      <label>browse by</label>
+      <select>
+        <option>I can take over the world! (energy required, high to low)</option>
+        <option>I can't get out of bed! (energy required, low to high)</option>
+        <option>I'm trying to eat healthy. (nutrition, high to low)</option>
+        <option>I hate myself. (nutrition, low to high)</option>
+      </select>
+    </nav>
+    <div class="recipes">
+      <div *ngFor="let recipe of recipes" class="recipe-card">
+        <section class="recipe-header">
+          <div>
+            <h2>{{recipe.title}}</h2>
+            <div>energy required: high</div>
+            <div>nutrition: high</div>
+          </div>
+          <div class="recipe-image">
+            <a href="{{recipe.url}}" target="_blank">
+              <img src={{recipe.picture}}>
+              <span>{{recipe.shortUrl}}</span>
+            </a>
+          </div>
+        </section>
+        <section>
+          <h3>ingredients:</h3>
+          <ul>
+            <div *ngFor="let ingredient of recipe.ingredients">
+              <li>{{ingredient}}</li>
+            </div>
+          </ul>
+        </section>
+        <section>
+          <h3>instructions:</h3>
+          <ol>
+            <div *ngFor="let step of recipe.steps"> 
+            <li>{{step}}</li>
+          </div>
+          </ol>
+        </section>
+      </div>
+    </div>
+  </div>
 </div>
