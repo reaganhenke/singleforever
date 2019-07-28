@@ -8,6 +8,13 @@ nav {
   color: $white;
   display: flex;
   justify-content: flex-end;
+  box-sizing: border-box;
+  label {
+    margin-right: 1rem;
+  }
+  select {
+    background: $white;
+  }
 }
 
 .recipe-card {
@@ -20,12 +27,25 @@ nav {
 .recipe-header {
   display: flex;
   justify-content: space-between;
+  height: $fixed-xl;
+  div {
+    position: relative;
+  }
+  button {
+    position: absolute;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    border: 0;
+    padding: 0;
+    bottom: 0;
+    right: 12px;
+  }
 }
 
 .recipe-image {
-  width: 60%;
   position: relative;
-  height: 162px;
+  height: 100%;
   img {
     width: 100%;
     object-fit: cover;
@@ -50,7 +70,7 @@ nav {
   }
 }
 
-.recipe-image:hover, .recipe-image:focus{
+.recipe-image:hover, .recipe-image a:focus{
   span {
     height: 20%;
     opacity: 1;

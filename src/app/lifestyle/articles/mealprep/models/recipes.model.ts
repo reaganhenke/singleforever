@@ -1,5 +1,6 @@
 export interface Recipe {
   title: string;
+  description: string;
   picture?: string;
   url?: string;
   shortUrl?: string;
@@ -12,6 +13,7 @@ export interface Recipe {
 export const recipes: Recipe[] = [
   {
     title: 'Mujaddara',
+    description: 'Lebenises lentils and rice. Some effort required, but nutritional payoff.',
     picture: 'assets/mealprep/mujaddara.jpg',
     url: 'https://thelemonbowl.com/mujaddara-lentils-and-rice-with-caramelized-onions/',
     shortUrl: 'thelemonbowl.com',

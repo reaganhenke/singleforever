@@ -98,3 +98,9 @@ main {
     width: 100%;
   }
 }
+
+@media only print {
+  header, footer, .not-print{
+    display: none !important;
+  }
+}

@@ -1,30 +1,34 @@
 <div class="white-block">
-  <img class="banner" src="assets/mealprep/mealfull.svg" alt="" />
-  <h2>Mealprep</h2>
-  <p>
-    Depression is funny, sometimes you can’t remember to eat and just
-    need to make sure you stay alive. Sometimes the only thing you have
-    energy to do is shove food in your mouth all day until you’ve put on
-    20 pounds. Some days you can’t get out of bed. Some days you can actually
-    be productive. So here are some of my favorite recipes; sort by how you feel today!
-  </p>
+  <div class="not-print">
+    <img class="banner" src="assets/mealprep/mealfull.svg" alt="" />
+    <h2>Mealprepping with Depression</h2>
+    <p>
+      Depression is funny, sometimes you can’t remember to eat and just
+      need to make sure you stay alive. Sometimes the only thing you have
+      energy to do is shove food in your mouth all day until you’ve put on
+      20 pounds. Some days you can’t get out of bed. Some days you can actually
+      be productive. So here are some of my favorite recipes; sort by how you feel today!
+    </p>
+  </div>
   <div class="wrapper">
-    <nav>
-      <label>browse by</label>
-      <select>
-        <option>I can take over the world! (energy required, high to low)</option>
-        <option>I can't get out of bed! (energy required, low to high)</option>
-        <option>I'm trying to eat healthy. (nutrition, high to low)</option>
-        <option>I hate myself. (nutrition, low to high)</option>
+    <nav class="not-print">
+      <label>sort by:</label>
+      <select [formControl]="sortMethod" (change)="updateSort()">
+        <option value="e-high">I can take over the world! (energy required, high to low)</option>
+        <option value="e-low">I can't get out of bed! (energy required, low to high)</option>
+        <option value="n-high">I'm trying to eat healthy. (nutrition, high to low)</option>
+        <option value="n-low">I hate myself. (nutrition, low to high)</option>
       </select>
     </nav>
     <div class="recipes">
-      <div *ngFor="let recipe of recipes" class="recipe-card">
+      <div *ngFor="let recipe of recipes" class="recipe-card not-print" id="{{recipe.title}}">
         <section class="recipe-header">
           <div>
             <h2>{{recipe.title}}</h2>
-            <div>energy required: high</div>
-            <div>nutrition: high</div>
+            <p>{{recipe.description}}</p>
+            <button (click)="print(recipe.title)">
+                <img src="assets/icons/print.svg" alt="print {{recipe.title}} recipe" />
+            </button>
           </div>
           <div class="recipe-image">
             <a href="{{recipe.url}}" target="_blank">
@@ -33,6 +37,7 @@
             </a>
           </div>
         </section>
+        <hr>
         <section>
           <h3>ingredients:</h3>
           <ul>
