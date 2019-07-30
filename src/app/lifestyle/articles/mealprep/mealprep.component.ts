@@ -14,10 +14,24 @@ export class MealprepComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.updateSort();
   }
 
   updateSort() {
-    console.log('sorting: ', this.sortMethod.value);
+    switch (this.sortMethod.value) {
+      case 'e-high':
+        recipes.sort((a, b) => (a.energy > b.energy) ? -1 : 1);
+        break;
+      case 'e-low':
+        recipes.sort((a, b) => (a.energy < b.energy) ? -1 : 1);
+        break;
+      case 'n-high':
+        recipes.sort((a, b) => (a.nutrition > b.nutrition) ? -1 : 1);
+        break;
+      case 'n-low':
+        recipes.sort((a, b) => (a.nutrition < b.nutrition) ? -1 : 1);
+        break;
+    }
   }
 
   print(id: string) {
