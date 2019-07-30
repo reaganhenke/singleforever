@@ -29,49 +29,10 @@ main {
   }
 }
 
-.featured-post {
-  display: flex;
-  width: 100%;
-  background-color: $white;
-  margin: $large 0;
-  cursor: pointer;
-  &>img {
-    background-color: #a1d4d2;
-    outline: 12px solid white;
-    outline-offset: -12px;
-  }
-  a {
-    font-size: 1.25;
-    color: #000;
-    text-decoration: none;
-    &:hover, &:focus {
-      color: $link-hover;
-    }
-  }
-}
-
-.banner-img {
-  width: 30%;
-  object-fit: cover;
-}
-
 .banner {
   max-height: 365px;
   object-fit: cover;
   object-position: 0 0;
-}
-
-.post-preview {
-  width: 70%;
-  box-sizing: border-box;
-  padding: $medium;
-  overflow: scroll;
-  h2 {
-    font-family: $arbutus;
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    margin-top: 0;
-  }
 }
 
 .white-block {

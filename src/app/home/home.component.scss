@@ -37,28 +37,6 @@ nav a {
   }
 }
 
-.info {
-  display: flex;
-  img {
-    height: 49px;
-    margin-right: 1rem;
-  }
-}
-
-.tag-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.tag-group span {
-  background-color: $salmon;
-  border-radius: 3px;
-  padding: 0.2rem 0.3rem;
-  margin: 0.25rem 0.5rem 0 0;
-  font-size: 0.9rem;
-}
-
 @media only screen and (max-width : 800px) {
   nav {
     flex-direction: column;

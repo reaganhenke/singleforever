@@ -14,6 +14,7 @@ import { ClipboardModule } from 'ngx-clipboard';
 import { FacebookModalComponent } from './modals/facebook-modal/facebook-modal.component';
 import { ModalService } from './services/modal.service';
 import { DomService } from './services/dom.service';
+import { PreviewsModule } from './previews.module';
 
 @NgModule({
   declarations: [
@@ -22,9 +23,10 @@ import { DomService } from './services/dom.service';
     FooterComponent,
     HomeComponent,
     MobileMenuComponent,
-    FacebookModalComponent
+    FacebookModalComponent,
   ],
   imports: [
+    PreviewsModule,
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,

@@ -1,0 +1,70 @@
+@import "../variables";
+
+.featured-post {
+  display: flex;
+  width: 100%;
+  background-color: $white;
+  margin: $large 0;
+  cursor: pointer;
+  &>img {
+    background-color: #a1d4d2;
+    outline: 12px solid white;
+    outline-offset: -12px;
+  }
+  a {
+    font-size: 1.25;
+    color: #000;
+    text-decoration: none;
+    &:hover, &:focus {
+      color: $link-hover;
+    }
+  }
+}
+
+.banner-img {
+  width: 30%;
+  object-fit: cover;
+}
+
+.post-preview {
+  width: 70%;
+  box-sizing: border-box;
+  padding: $medium;
+  overflow: scroll;
+  h2 {
+    font-family: $arbutus;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    color: $link-hover;
+  }
+}
+
+.info {
+  display: flex;
+  img {
+    height: 49px;
+    margin-right: 1rem;
+  }
+}
+
+.tag-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.tag-group span {
+  background-color: $salmon;
+  border-radius: 3px;
+  padding: 0.2rem 0.3rem;
+  margin: 0.25rem 0.5rem 0 0;
+  font-size: 0.9rem;
+}
