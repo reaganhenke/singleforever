@@ -14,7 +14,7 @@ export class RedFlagsComponent {
   results: number;
   total: number;
   finished = false;
-  href = 'asdfkhadfkjhdsflkajhdf.com';
+  href = 'https://single-forever.netlify.com/';
   copied = false;
   heightPercent: string;
 

@@ -14,7 +14,7 @@ export class WhoDateComponent {
   winner: string;
   questions = dateQuestions;
   copied = false;
-  href = 'placeholder.com';
+  href = 'https://single-forever.netlify.com/';
 
   constructor(private fb: FacebookService) {
     this.whoDateForm = new FormGroup({});

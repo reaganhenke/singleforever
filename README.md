@@ -2,6 +2,9 @@
 
 _How to Stay Single Forever_ is a static front end site designed to be a parody dating blog. I created this project to demonstrate a number of front-end techniques and technologies. I'm a front-end developer who is passionate about accessibility, and I wanted to build out a full site that shows off what's possible with Angular.
 
+## Deployment
+The site is deployed with [Netlify](https://app.netlify.com/teams/reaganhenke/sites) and available at [https://single-forever.netlify.com/](https://single-forever.netlify.com/).
+
 ## General
 The site is fully responsive, and the menu items become a floating mobile menu button when the screen size becomes small enough. The mobile menu slides out and freezes the rest of the screen. 
 
