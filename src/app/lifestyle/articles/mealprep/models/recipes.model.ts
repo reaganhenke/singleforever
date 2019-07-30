@@ -41,7 +41,7 @@ export const recipes: Recipe[] = [
   steps: [`To make the soy glaze: add the vinegar, soy sauce, sugar, and ginger to a small saucepan.
     Bring to a boil, and then simmer until reduced (about 10 minutes). Set aside and let cool.`,
     `In a medium pot, combine 1 cup water, a big pinch of salt, and as much of the gochujang as you want.
-    Whisk. Add the rice. Heat to boiling, then reduce to low. Cover and cook without stirring until the 
+    Whisk. Add the rice. Heat to boiling, then reduce to low. Cover and cook without stirring until the
     water has been absorbed (12-14 minutes)`,
     `Wash and dry the bok choy. Chop off and discard the root end, then roughly chop and set aside.`,
     `In a bowl, whisk together the honey, sesame oil, 1 tbsp warm water, and the soy glaze.`,
