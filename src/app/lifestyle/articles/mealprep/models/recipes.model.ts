@@ -31,7 +31,7 @@ export const recipes: Recipe[] = [
 }, {
   title: 'Honey-Sesame Chicken & Bok Choy',
   description: `Lightly crispy chicken tenders and bok choy in a rich, sweet sauce. A very rewarding dish.
-    Served over rice infused with spicy gochujang— a traditional Korean chile paste. Lots of effort required, but high nutritional payoff.`,
+    Lots of effort required, but high nutritional payoff.`,
   picture: 'assets/mealprep/sesamechicken.jpg',
   url: 'https://www.blueapron.com/recipes/honey-sesame-chicken-bok-choy-with-gochujang',
   shortUrl: 'blueapron.com',

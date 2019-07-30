@@ -3,7 +3,7 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 796.1 798.9" style="enable-background:new 0 0 796.1 798.9;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#79C6C1;enable-background:new    ;}
+	.st0{fill:#79C6C1;}
 	.st1{fill:#3F3D56;}
 	.st2{fill:url(#SVGID_1_);}
 	.st3{fill:#663D5B;}
@@ -11,8 +11,8 @@
 	.st5{fill:#CC818C;}
 	.st6{opacity:0.1;enable-background:new    ;}
 	.st7{fill:#565987;}
-	.st8{opacity:0.1;fill:#E7685D;enable-background:new    ;}
-	.st9{fill:#E7685D;}
+	.st8{opacity:0.21;fill:#6C63FF;enable-background:new    ;}
+	.st9{fill:#6C63FF;}
 	.st10{fill:none;stroke:#565987;stroke-miterlimit:10;}
 	.st11{fill:#FFD037;}
 	.st12{fill:#A8A8A8;}
@@ -25,7 +25,7 @@
 	c7.2,130.6,93.1,233.8,198,233.8c52.8,0,100.8-26.1,136.4-68.8c35.7,43.4,84.1,70.1,137.5,70.1c79.2,0,147.6-58.8,179.4-143.8
 	c63.9-26.4,113.5-92.8,130.5-175.8L487.5,313h300.7C788.1,311.8,788.2,310.6,788.2,309.3z"/>
 <ellipse class="st1" cx="286.7" cy="761.7" rx="227" ry="37.2"/>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="378.748" y1="394.7686" x2="378.748" y2="-290.1857" gradientTransform="matrix(1 0 0 1 -86.32 387.44)">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="378.7479" y1="403.2314" x2="378.7479" y2="1088.1857" gradientTransform="matrix(1 0 0 -1 -86.32 1185.4399)">
 	<stop  offset="0" style="stop-color:#808080;stop-opacity:0.25"/>
 	<stop  offset="0.54" style="stop-color:#808080;stop-opacity:0.12"/>
 	<stop  offset="1" style="stop-color:#808080;stop-opacity:0.1"/>
@@ -138,8 +138,8 @@
 	c6.9-0.3,13.6,1.4,20.5,1.8s14.3-0.6,19.2-5.5c1.4-1.4,2.5-3,3.2-4.8C295.9,279.7,295.4,280.2,294.8,280.8z"/>
 <polygon class="st5" points="148.5,371.7 144.8,379.7 156.5,377.4 "/>
 <polygon class="st6" points="148.5,371.7 145.5,379.7 144.8,379.7 "/>
-<ellipse class="st8" cx="397.2" cy="712.1" rx="41" ry="5.6"/>
-<ellipse class="st8" cx="554.3" cy="728.1" rx="41" ry="5.6"/>
+<ellipse class="st8" cx="399.2" cy="712.1" rx="41" ry="5.6"/>
+<ellipse class="st8" cx="556.3" cy="728.1" rx="41" ry="5.6"/>
 <ellipse class="st8" cx="739.3" cy="706.5" rx="41" ry="5.6"/>
 <ellipse class="st8" cx="654.4" cy="769.4" rx="29.1" ry="4"/>
 <path class="st9" d="M555.2,726.8c0,0-57.5-188.5,9-264c49.7-56.5,106.2-49.7,131.5-42.7c13.2,3.5,24.3,12.7,30.2,25.1
