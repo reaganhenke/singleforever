@@ -49,3 +49,24 @@ main {
     display: none !important;
   }
 }
+
+@media only screen and (max-width: $screen-tablet) {
+  main {
+    margin: 2rem;
+    width: calc(100% - 4rem);
+  }
+  .white-block {
+    padding: 1.5rem;
+  }
+}
+
+
+@media only screen and (max-width: $screen-mobile) {
+  main {
+    margin: 1rem;
+    width: calc(100% - 2rem);
+  }
+  .white-block {
+    padding: 1rem;
+  }
+}
