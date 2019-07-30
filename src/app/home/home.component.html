@@ -4,9 +4,27 @@
   <a routerLink="/lifestyle"><span>Lifestyle</span></a>
 </nav>
 
-<app-who-date-preview></app-who-date-preview>
+<!-- <app-who-date-preview></app-who-date-preview>
 <app-red-flags-preview></app-red-flags-preview>
 <app-moveon-preview></app-moveon-preview>
 <app-ghosted-preview></app-ghosted-preview>
 <app-mealprep-preview></app-mealprep-preview>
-<app-morning-preview></app-morning-preview>
+<app-morning-preview></app-morning-preview> -->
+
+<div [ngSwitch]="idxOne">
+  <app-who-date-preview *ngSwitchCase="'whodate'"></app-who-date-preview>
+  <app-red-flags-preview *ngSwitchCase="'redflags'"></app-red-flags-preview>
+  <app-moveon-preview *ngSwitchCase="'moveon'"></app-moveon-preview>
+  <app-ghosted-preview *ngSwitchCase="'ghosted'"></app-ghosted-preview>
+  <app-mealprep-preview *ngSwitchCase="'mealprep'"></app-mealprep-preview>
+  <app-morning-preview *ngSwitchCase="'morning'"></app-morning-preview>
+</div>
+
+<div [ngSwitch]="idxTwo">
+  <app-who-date-preview *ngSwitchCase="'whodate'"></app-who-date-preview>
+  <app-red-flags-preview *ngSwitchCase="'redflags'"></app-red-flags-preview>
+  <app-moveon-preview *ngSwitchCase="'moveon'"></app-moveon-preview>
+  <app-ghosted-preview *ngSwitchCase="'ghosted'"></app-ghosted-preview>
+  <app-mealprep-preview *ngSwitchCase="'mealprep'"></app-mealprep-preview>
+  <app-morning-preview *ngSwitchCase="'morning'"></app-morning-preview>
+</div>
