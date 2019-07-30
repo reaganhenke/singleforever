@@ -29,7 +29,8 @@
       <button (click)="skipNav()" class="skip-nav">Skip to Footer Navigation</button>
       <form class="search" [formGroup]="searchForm">
         <input type="text" *ngIf="!searchForm.get('searchInput').disabled"
-          [class.show]="showSearch" formControlName="searchInput" id="searchInput" />
+          [class.show]="showSearch" formControlName="searchInput" id="searchInput" 
+          aria-label="search input"/>
         <button (click)="toggleSearch()" (mousedown)="$event.preventDefault()" aria-label="toggle search input"
           [attr.aria-expanded]="!searchForm.get('searchInput').disabled"></button>
       </form>

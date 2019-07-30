@@ -12,8 +12,8 @@
   </div>
   <div class="wrapper">
     <nav class="not-print">
-      <label>sort by:</label>
-      <select [formControl]="sortMethod" (change)="updateSort()">
+      <label for="select-sort">sort by:</label>
+      <select [formControl]="sortMethod" (change)="updateSort()" id="select-sort">
         <option value="e-high">I can take over the world! (energy required, high to low)</option>
         <option value="e-low">I can't get out of bed! (energy required, low to high)</option>
         <option value="n-high">I'm trying to eat healthy. (nutrition, high to low)</option>
@@ -32,7 +32,7 @@
           </div>
           <div class="recipe-image">
             <a href="{{recipe.url}}" target="_blank">
-              <img src={{recipe.picture}}>
+              <img src={{recipe.picture}} alt="{{recipe.title}}">
               <span>{{recipe.shortUrl}}</span>
             </a>
           </div>
@@ -41,17 +41,17 @@
         <section>
           <h3>ingredients:</h3>
           <ul>
-            <div *ngFor="let ingredient of recipe.ingredients">
-              <li>{{ingredient}}</li>
-            </div>
+            <li *ngFor="let ingredient of recipe.ingredients">
+              {{ingredient}}
+            </li>
           </ul>
         </section>
         <section>
           <h3>instructions:</h3>
           <ol>
-            <div *ngFor="let step of recipe.steps"> 
-            <li>{{step}}</li>
-          </div>
+            <li *ngFor="let step of recipe.steps">
+              {{step}}
+            </li>
           </ol>
         </section>
       </div>
