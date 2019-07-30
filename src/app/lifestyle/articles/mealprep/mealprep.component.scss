@@ -14,6 +14,7 @@ nav {
   }
   select {
     background: $white;
+    max-width: 75%;
   }
 }
 
@@ -27,9 +28,14 @@ nav {
 .recipe-header {
   display: flex;
   justify-content: space-between;
-  height: $fixed-xl;
   div {
     position: relative;
+    &:first-child {
+      width: 66%;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
   }
   button {
     position: absolute;
@@ -44,12 +50,11 @@ nav {
 }
 
 .recipe-image {
-  position: relative;
-  height: 100%;
+  width: 33%;
   img {
-    width: 100%;
     object-fit: cover;
-    height: 100%;
+    width: 100%;
+    height: $fixed-xl;
   }
   span {
     position: absolute;
@@ -74,5 +79,23 @@ nav {
   span {
     height: 20%;
     opacity: 1;
+  }
+}
+
+
+
+@media only screen and (max-width: $screen-tablet) {
+  .recipe-header {
+    flex-direction: column-reverse;
+    div:first-child {
+      width: 100%;
+    }
+  }
+
+  .recipe-image {
+    width: 100%;
+    img {
+      width: 100%;
+    }
   }
 }
