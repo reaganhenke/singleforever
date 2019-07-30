@@ -8,7 +8,7 @@
     tell you exactly how to move on. Here’s how to get over your ex.
   </p>
   <div class="inner-block">
-    <span><button *ngIf="idx > 0" (click)="move(-1)"  class="back" (mousedown)="$event.preventDefault()"></button></span>
+    <span><button *ngIf="idx > 0" (click)="move(-1)" class="back" (mousedown)="$event.preventDefault()" aria-label="previous"></button></span>
     <div class="content">
     
       <span *ngFor="let step of steps;index as i" class="wrapper" [class.active]="idx === i">
@@ -20,6 +20,6 @@
       </span>
 
   </div>
-    <span><button *ngIf="idx < steps.length - 1" (click)="move(1)" class="forward" (mousedown)="$event.preventDefault()"></button></span>
+    <span><button *ngIf="idx < steps.length - 1" (click)="move(1)" class="forward" (mousedown)="$event.preventDefault()" aria-label="next"></button></span>
   </div>
 </div>
