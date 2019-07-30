@@ -68,3 +68,20 @@ a {
   margin: 0.25rem 0.5rem 0 0;
   font-size: 0.9rem;
 }
+
+@media only screen and (max-width : 600px) {
+  .featured-post {
+    flex-direction: column;
+  }
+
+  .banner-img {
+    width: 100%;
+    height: 200px;
+    object-position: 0 0;
+    object-fit: cover;
+  }
+
+  .post-preview {
+    width: 100%;
+  }
+}
