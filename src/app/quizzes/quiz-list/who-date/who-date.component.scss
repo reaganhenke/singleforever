@@ -10,7 +10,7 @@
     height: 8rem;
     margin: 0.25rem;
     border: 0;
-    background-color: $navy;
+    background: $navy;
     color: white;
     border-radius: 5px;
     font-size: 2rem;
@@ -70,4 +70,14 @@
 .boy {
   height: 300px;
   margin-right: 2rem;
+}
+
+@media only screen and (max-width: $screen-tablet) {
+  .answers input {
+    width: 100%;
+  }
+
+  .results .boy {
+    display: none;
+  }
 }
