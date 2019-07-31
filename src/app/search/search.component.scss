@@ -29,3 +29,9 @@ button {
   padding: 0;
   cursor: pointer;
 }
+
+@media only screen and (max-width: $screen-tablet) {
+  #searched-input {
+    width: 100%;
+  }
+}
