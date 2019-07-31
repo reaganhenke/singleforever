@@ -17,6 +17,9 @@
     transition: font-size 0.2s;
     padding: 1rem;
     white-space: normal;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     cursor: pointer;
     &:hover, &:focus {
       font-size: 2.2rem;
