@@ -15,19 +15,19 @@
   font-size: 0.825rem;
 }
 
-::ng-deep #texts span {
+::ng-deep #texts div {
   border-radius: 12px;
   padding: 0.25rem 0.5rem;
   margin: 0.25rem 0;
   position: relative;
 }
 
-::ng-deep .right span {
+::ng-deep .right div {
   background-color: #147efb;
   color: white;
 }
 
-.left span {
+.left div {
   background-color: #d0d0d0;
 }
 
@@ -47,7 +47,7 @@
   align-items: flex-end;
 }
 
-.left span:last-child::after {
+.left div:last-child::after {
   content: "";
   position: absolute;
   left: 0;
@@ -58,7 +58,7 @@
   transform: rotate(14deg);
 }
 
-::ng-deep .right span:last-child::after{
+::ng-deep .right div:last-child::after{
   content: "";
   position: absolute;
   right: 0;

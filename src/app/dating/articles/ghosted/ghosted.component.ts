@@ -25,7 +25,7 @@ export class GhostedComponent implements OnInit {
     // if at the bottom
     if (this.scrolled === (this.scrollHeight - this.windowHeight)) {
 
-      const newText = document.createElement('span');
+      const newText = document.createElement('div');
       newText.textContent = texts[(Math.floor(Math.random() * texts.length))];
 
       setTimeout(() => {
