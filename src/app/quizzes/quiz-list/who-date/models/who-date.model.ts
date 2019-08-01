@@ -49,16 +49,16 @@ export const dateQuestions: Question[] = [{
   question: 'Do you seriously think you’ve got a shot?',
   answers: [{
     option: 'Yes!',
-    result: false,
+    result: resultDate.ElevatorBoy,
   }, {
     option: 'Definitely',
-    result: false
+    result: resultDate.BreakroomBoy
   }, {
     option: 'Maybe',
-    result: false
+    result: resultDate.MetroBoy
   }, {
     option: 'No',
-    result: true
+    result: resultDate.InstagramBoy
   }]
 }, {
   question: 'What’s your dream date?',

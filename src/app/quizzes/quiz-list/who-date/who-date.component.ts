@@ -24,7 +24,7 @@ export class WhoDateComponent {
   }
 
   select(i: string, value: string) {
-    if (!this.winner && !!value) {
+    if (!this.winner) {
       this.whoDateForm.get(i).setValue(value);
     }
   }
