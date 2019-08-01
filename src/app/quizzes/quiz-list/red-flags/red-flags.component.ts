@@ -14,7 +14,7 @@ export class RedFlagsComponent {
   results: number;
   total: number;
   finished = false;
-  href = 'https://single-forever.netlify.com/';
+  href = 'https://single-forever.netlify.com/quizzes/red';
   copied = false;
   heightPercent: string;
 
@@ -50,7 +50,7 @@ export class RedFlagsComponent {
 
   share() {
     const params: UIParams = {
-      href: 'https://github.com/zyra/ngx-facebook',
+      href: this.href,
       method: 'share',
       quote: `I found ${this.results} red flags. Can you do better?`
     };
@@ -58,7 +58,7 @@ export class RedFlagsComponent {
   }
 
   tweet() {
-    const text = `I found ${this.results} red flags. Can you do better? ${this.href}`;
+    const text = `I found ${this.results} red flags. Can you do better?`;
     const href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(this.href);
     window.open(href, '', 'menubar=no, toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
   }

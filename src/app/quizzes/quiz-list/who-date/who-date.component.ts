@@ -14,7 +14,7 @@ export class WhoDateComponent {
   winner: string;
   questions = dateQuestions;
   copied = false;
-  href = 'https://single-forever.netlify.com/';
+  href = 'https://single-forever.netlify.com/quizzes/whodate';
 
   constructor(private fb: FacebookService) {
     this.whoDateForm = new FormGroup({});
@@ -68,7 +68,7 @@ export class WhoDateComponent {
   }
 
   tweet() {
-    const text = `I got ${this.winner}! See who your dream date is! ${this.href}`;
+    const text = `I got ${this.winner}! See who your dream date is!`;
     const href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(text) + '&url=' + encodeURIComponent(this.href);
     window.open(href, '', 'menubar=no, toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');
   }
