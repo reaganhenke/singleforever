@@ -66,7 +66,7 @@ export const dateQuestions: Question[] = [{
     option: 'Going to a Broadway play',
     result: resultDate.InstagramBoy
   }, {
-    option: 'Going Clubbing',
+    option: 'Going out dancing',
     result: resultDate.MetroBoy
   }, {
     option: 'Going to a museum',
@@ -81,7 +81,7 @@ export const dateQuestions: Question[] = [{
     option: 'Foreign films',
     result: resultDate.MetroBoy
   }, {
-    option: 'Studying chinese',
+    option: 'Studying a foreign language',
     result: resultDate.BreakroomBoy
   }, {
     option: 'Working out',

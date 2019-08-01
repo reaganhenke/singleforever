@@ -14,5 +14,5 @@ export const flagList = [
   'He lies a lot',
   'Seriously, all of your family and friends can tell he’s not telling the truth',
   'Why can’t you see he’s lying to you?',
-  'He was never the person you thought he was'
+  'He was never who you thought he was'
 ];

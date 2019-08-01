@@ -4,7 +4,7 @@ export const texts = [
   'this is it?',
   'seriously, you\'re done?',
   'just like that?',
-  'I don\'t believe this',
+  'i don\'t believe this',
   'give me another chance!',
   'i thought things were going really well between us',
   'can you tell me what i did wrong?',

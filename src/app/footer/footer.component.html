@@ -1,7 +1,9 @@
 <footer>
   <div class="container">
     <nav class="page-links">
-      <a routerLink="quizzes" routerLinkActive="active" id="first-link" tabindex="0">quizzes</a>
+      <a routerLink="/" routerLinkActive="active" id="first-link" tabindex="0"
+        [routerLinkActiveOptions]="{exact: true}" (mousedown)="$event.preventDefault()">home</a>
+      <a routerLink="quizzes" routerLinkActive="active">quizzes</a>
       <a routerLink="dating" routerLinkActive="active">dating</a>
       <a routerLink="lifestyle" routerLinkActive="active">lifestyle</a>
       <a routerLink="about" routerLinkActive="active">about</a>

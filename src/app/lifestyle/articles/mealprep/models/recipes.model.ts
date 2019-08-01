@@ -13,7 +13,8 @@ export interface Recipe {
 export const recipes: Recipe[] = [
   {
     title: 'Mujadara',
-    description: 'Lebanese lentils, rice, and carmelized onions. An excellent comfort food. Some effort required, but nutritional payoff.',
+    description: `Lebanese lentils, rice, and carmelized onions. An excellent comfort food.
+      Some effort required, but high nutritional payoff.`,
     picture: 'assets/mealprep/mujaddara.jpg',
     url: 'https://thelemonbowl.com/mujaddara-lentils-and-rice-with-caramelized-onions/',
     shortUrl: 'thelemonbowl.com',
@@ -89,7 +90,8 @@ export const recipes: Recipe[] = [
   energy: 1
 }, {
   title: 'Chocolate Chip Cookies',
-  description: `More effort than a simple snack, but with a sweet, sugary reward.`,
+  description: `More effort than a simple snack, but with a sweet, sugary reward. Great for when you've
+  got enough energy to really reward yourself`,
   picture: 'assets/mealprep/cookies.jpg',
   url: 'https://www.ihearteating.com/easiest-chocolate-chip-cookie-recipe/',
   shortUrl: 'ihearteating.com',

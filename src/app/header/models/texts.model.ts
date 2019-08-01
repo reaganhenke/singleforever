@@ -3,6 +3,5 @@ export const texts = [
   'Did you get my text?',
   'Haven’t heard from you lately.',
   'Did I say something wrong?',
-  'Are you seriously dumping me over text?',
-  'I thought you felt the same way..'
+  'Are you seriously dumping me over text?'
 ];
