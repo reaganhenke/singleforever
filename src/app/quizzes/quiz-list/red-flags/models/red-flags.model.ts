@@ -5,7 +5,6 @@ export const flagList = [
   'He treats animals badly',
   'He treats his friends badly',
   'He thinks therapy is “only for the weak”',
-  'He thinks being shitty “helps him as an artist”',
   'He doesn’t think kissing other people is cheating',
   'He waits for you to fall asleep and then pulls out his phone to text other girls',
   'He doesn’t listen when you tell him “no”',

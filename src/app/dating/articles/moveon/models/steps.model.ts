@@ -18,7 +18,7 @@ export const steps = [
     imgUrl: 'assets/moveon/cleanse.svg',
     content: `Make a clean break. Block him on everything.
       That’s right, don’t just unfriend him, block him. Block his number,
-      block his facebook, block his twitter. Don’t forget to set up an email
+      block his Facebook, block his Twitter. Don’t forget to set up an email
       filter for all his addresses too, because he will try to follow you
       across the country if he thinks there’s a chance you’ll still talk to him.`
   }, {
@@ -26,9 +26,9 @@ export const steps = [
     imgUrl: 'assets/moveon/travel.svg',
     content: `When everything reminds you of him, sometimes you just
     need to get away! Grab a girlfriend and a suitcase and pick a place,
-    any place. Do what I did, go all the way to Belize, and then spend
-    the entire time in paradise only talking about your ex. To this day,
-    my travel buddy still won’t speak to me.`
+    any place. Do what I did, go to a tropical paradise, and then spend
+    the entire time only talking about your ex. Your friends will love it,
+    trust me.`
   }, {
     title: '4. Try something new',
     imgUrl: 'assets/moveon/new.svg',
@@ -49,8 +49,7 @@ export const steps = [
     title: '6. Give it time',
     imgUrl: 'assets/moveon/time.svg',
     content: `Eventually, time heals all wounds. It’ll get easier. At least,
-    that’s what I keep telling myself. Except it’s already been two and a half
-    years. Any day now though. `
+    that’s what I keep telling myself. Except it’s already been years. Any day now though. `
   }, {
     title: '7. I don\'t know',
     imgUrl: 'assets/moveon/dontknow.svg',
